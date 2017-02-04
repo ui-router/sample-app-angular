@@ -82,9 +82,18 @@ export function returnTo ($transition$: Transition): any {
   return $state.target('home');
 }
 
+// This future state is a placeholder for all the lazy loaded Contacts states
+// The Contacts NgModule isn't loaded until a Contacts link is activated
+export const contactsFutureState = {
+  name: 'contacts.**',
+  url: '/contacts',
+  loadChildren: './contacts/contacts.module#ContactsModule'
+};
+
 export const APP_STATES = [
   appState,
   welcomeState,
   homeState,
   loginState,
+  contactsFutureState,
 ];
