@@ -8,6 +8,7 @@ import { EditContactComponent } from './edit-contact.component';
 import { CONTACTS_STATES } from './contacts.states';
 import { UIRouterModule } from 'ui-router-ng2';
 import { FormsModule } from '@angular/forms';
+import { ContactsService } from './contacts.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     ContactListComponent,
     ContactsComponent,
     EditContactComponent
-  ]
+  ],
+  providers: [
+    ContactsService
+  ],
 })
 export class ContactsModule {
 }

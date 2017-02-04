@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Inject, Optional, OnDestroy } from '@angular/
 import { StateService, TransitionService, copy, equals } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
 import { UIView } from 'ui-router-ng2';
+import { ContactsService } from './contacts.service';
 
 /**
  * The EditContact component
@@ -65,8 +66,8 @@ export class EditContactComponent implements OnInit, OnDestroy {
 
   constructor(public $state: StateService,
               public dialogService: DialogService,
-              @Inject('Contacts') public Contacts,
-              @Optional() @Inject(UIView.PARENT_INJECT) view,
+              public contactsService: ContactsService,
+              @Optional() @Inject(UIView.PARENT_INJECT) view: any,
               public $trans: TransitionService) {
     this.state = view && view.context && view.context.name;
   }
@@ -96,14 +97,14 @@ export class EditContactComponent implements OnInit, OnDestroy {
   /** Ask for confirmation, then delete the contact, then go to the grandparent state ('contacts') */
   remove(contact) {
     this.dialogService.confirm(`Delete contact: ${contact.name.first} ${contact.name.last}`)
-      .then(() => this.Contacts.remove(contact))
+      .then(() => this.contactsService.remove(contact))
       .then(() => this.canExit = true)
       .then(() => this.$state.go('^.^', null, { reload: true }));
   }
 
   /** Save the contact, then go to the parent state (either 'contacts' or 'contacts.contact') */
   save(contact) {
-    this.Contacts.save(contact)
+    this.contactsService.save(contact)
       .then(() => this.canExit = true)
       .then(() => this.$state.go('^', null, { reload: true }));
   }

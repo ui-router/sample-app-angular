@@ -5,8 +5,8 @@ import { AppConfigService } from '../global/app-config.service';
 /** A fake Contacts REST client API */
 @Injectable()
 export class ContactsService extends SessionStorage {
-  constructor($http, $timeout, $q, appConfig: AppConfigService) {
+  constructor(appConfig: AppConfigService) {
     // http://beta.json-generator.com/api/json/get/V1g6UwwGx
-    super($http, $timeout, $q, 'contacts', 'data/contacts.json', appConfig);
+    super('contacts', 'assets/contacts.json', appConfig);
   }
 }
