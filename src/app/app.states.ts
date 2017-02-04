@@ -90,10 +90,18 @@ export const contactsFutureState = {
   loadChildren: './contacts/contacts.module#ContactsModule'
 };
 
+// This future state is a placeholder for the lazy loaded Prefs states
+export const prefsFutureState = {
+  name: 'prefs.**',
+  url: '/prefs',
+  loadChildren: './prefs/prefs.module#PrefsModule'
+};
+
 export const APP_STATES = [
   appState,
   welcomeState,
   homeState,
   loginState,
   contactsFutureState,
+  prefsFutureState,
 ];
