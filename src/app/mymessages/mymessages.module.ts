@@ -9,6 +9,9 @@ import { MYMESSAGES_STATES } from './mymessages.states';
 import { FormsModule } from '@angular/forms';
 import { MessagesService } from './messages.service';
 import { FoldersService } from './folders.service';
+import { FolderListComponent } from './folder-list.component';
+import { MessageTableComponent } from './message-table.component';
+import { SortMessagesComponent } from './sort-messages.component';
 
 @NgModule({
   imports: [
@@ -20,7 +23,10 @@ import { FoldersService } from './folders.service';
     ComposeComponent,
     MessageComponent,
     MessageListComponent,
-    MymessagesComponent
+    MymessagesComponent,
+    FolderListComponent,
+    MessageTableComponent,
+    SortMessagesComponent
   ],
   providers: [
     MessagesService,
