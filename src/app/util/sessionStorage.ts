@@ -1,4 +1,5 @@
-import {pushToArr, guid, setProp} from './util';
+import { pushToArr, guid, wait } from './util';
+import { AppConfigService } from '../global/app-config.service';
 
 /**
  * This class simulates a RESTful resource, but the API calls fetch data from
@@ -12,23 +13,20 @@ import {pushToArr, guid, setProp} from './util';
  *
  * For an example, please see dataSources.js
  */
-export class SessionStorage {
+export class SessionStorage<T> {
   // data
-  _data;
-  _idProp;
-  _eqFn;
+  _data: Promise<T[]>;
+  _idProp: string;
+  _eqFn: (a: T, b: T) => boolean;
 
   /**
    * Creates a new SessionStorage object
    *
-   * @param $http Pass in the $http service
-   * @param $timeout Pass in the $timeout service
-   * @param $q Pass in the $q service
    * @param sessionStorageKey The session storage key. The data will be stored in browser's session storage under this key.
    * @param sourceUrl The url that contains the initial data.
-   * @param AppConfig Pass in the AppConfig object
+   * @param appConfig Pass in the AppConfig object
    */
-  constructor($http, public $timeout, public $q, public sessionStorageKey, sourceUrl, public AppConfig) {
+  constructor(public sessionStorageKey, sourceUrl, public appConfig: AppConfigService) {
     let data;
     const fromSession = sessionStorage.getItem(sessionStorageKey);
     // A promise for *all* of the data.
@@ -49,58 +47,58 @@ export class SessionStorage {
       }
     }
 
-    const stripHashKey = (obj) =>
-        setProp(obj, '$$hashKey', undefined);
-
     // Create a promise for the data; Either the existing data from session storage, or the initial data via $http request
-    this._data = (data ? $q.resolve(data) : $http.get(sourceUrl).then(resp => resp.data))
+    this._data = (data ? Promise.resolve(data) : fetch(sourceUrl)
+        .then(resp => resp.json()))
         .then(this._commit.bind(this))
-        .then(() => JSON.parse(sessionStorage.getItem(sessionStorageKey)))
-        .then(array => array.map(stripHashKey));
-
+        .then(() => JSON.parse(sessionStorage.getItem(sessionStorageKey)));
   }
 
   /** Saves all the data back to the session storage */
-  _commit(data) {
+  _commit(data: T[]): Promise<T[]> {
     sessionStorage.setItem(this.sessionStorageKey, JSON.stringify(data));
-    return this.$q.resolve(data);
+    return Promise.resolve(data);
   }
 
   /** Helper which simulates a delay, then provides the `thenFn` with the data */
-  all(thenFn) {
-    return this.$timeout(() => this._data, this.AppConfig.restDelay).then(thenFn);
+  all(): Promise<T[]> {
+    const delay = this.appConfig.restDelay;
+    return wait(delay).then(() => this._data);
   }
 
   /** Given a sample item, returns a promise for all the data for items which have the same properties as the sample */
-  search(exampleItem) {
+  search(exampleItem): Promise<T[]> {
     const contains = (search, inString) =>
         ('' + inString).indexOf('' + search) !== -1;
     const matchesExample = (example, item) =>
         Object.keys(example).reduce((memo, key) => memo && contains(example[key], item[key]), true);
-    return this.all(items =>
+    return this.all().then(items =>
         items.filter(matchesExample.bind(null, exampleItem)));
   }
 
   /** Returns a promise for the item with the given identifier */
-  get(id) {
-    return this.all(items =>
+  get(id): Promise<T> {
+    return this.all().then(items =>
         items.find(item => item[this._idProp] === id));
   }
 
   /** Returns a promise to save the item.  It delegates to put() or post() if the object has or does not have an identifier set */
-  save(item) {
+  save(item: T): Promise<T>  {
     return item[this._idProp] ? this.put(item) : this.post(item);
   }
 
   /** Returns a promise to save (POST) a new item.   The item's identifier is auto-assigned. */
-  post(item) {
+  post(item: T): Promise<T> {
     item[this._idProp] = guid();
-    return this.all(items => pushToArr(items, item)).then(this._commit.bind(this));
+    return this.all()
+      .then(items => pushToArr(items, item))
+      .then(this._commit.bind(this))
+      .then(() => item);
   }
 
   /** Returns a promise to save (PUT) an existing item. */
-  put(item, eqFn = this._eqFn) {
-    return this.all(items => {
+  put(item: T, eqFn = this._eqFn): Promise<T> {
+    return this.all().then(items => {
       const idx = items.findIndex(eqFn.bind(null, item));
       if (idx === -1) {
         throw Error(`${item} not found in ${this}`);
@@ -111,8 +109,8 @@ export class SessionStorage {
   }
 
   /** Returns a promise to remove (DELETE) an item. */
-  remove(item, eqFn = this._eqFn) {
-    return this.all(items => {
+  remove(item, eqFn = this._eqFn): Promise<T> {
+    return this.all().then(items => {
       const idx = items.findIndex(eqFn.bind(null, item));
       if (idx === -1) {
         throw Error(`${item} not found in ${this}`);
