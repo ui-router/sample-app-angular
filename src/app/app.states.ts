@@ -75,11 +75,16 @@ export function returnTo ($transition$: Transition): any {
   // The user was not redirected to the login state; they directly activated the login state somehow.
   // Return them to the state they came from.
   if ($transition$.from().name !== '') {
-    return $state.target($transition$.from(), $transition$.params("from"));
+    return $state.target($transition$.from(), $transition$.params('from'));
   }
 
   // If the fromState's name is empty, then this was the initial transition. Just return them to the home state
   return $state.target('home');
 }
 
-export const APP_STATES = [ appState, welcomeState, homeState, loginState ];
+export const APP_STATES = [
+  appState,
+  welcomeState,
+  homeState,
+  loginState,
+];
