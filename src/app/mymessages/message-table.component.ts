@@ -26,7 +26,7 @@ import { Component, Input } from '@angular/core';
       <tbody>
         <tr *ngFor="let message of messages"
             uiSref=".message" [uiParams]="{ messageId: message._id }" uiSrefActive="active">
-          <td *ngIf="colVisible('read')"><i class="fa fa-circle" style="font-size: 50%" [hidden]="message.read"></i></td>
+          <td *ngIf="colVisible('read')"><i class="fa fa-circle" style="font-size: 50%" *ngIf="!message.read"></i></td>
           <td *ngIf="colVisible('from')">{{ message.from }}</td>
           <td *ngIf="colVisible('to')">{{ message.to }}</td>
           <td *ngIf="colVisible('subject')">{{ message.subject }}</td>
