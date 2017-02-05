@@ -1,8 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { setProp } from '../util/util';
 import { DialogService } from '../global/dialog.service';
-import { MessagesDataService } from './messages-data.service';
+import { MessagesDataService, Message } from './messages-data.service';
 import { StateService } from 'ui-router-core';
+import { Subscription } from 'rxjs/Subscription';
+import { Observable } from 'rxjs/Observable';
+import { Folder } from './folders-data.service';
 
 /**
  * This component renders a single message
@@ -51,10 +54,13 @@ import { StateService } from 'ui-router-core';
   styles: []
 })
 export class MessageComponent implements OnInit {
-  // bound
-  @Input() folder;
-  @Input() message;
-  @Input() nextMessageGetter;
+  @Input() folder: Folder;
+  @Input() message: Message;
+
+  // What message should be activated if this message is deleted
+  @Input() proximalMessage$: Observable<Message>;
+  private proximalMessageSub: Subscription;
+  proximalMessage: Message;
 
   // data
   actions;
@@ -74,6 +80,7 @@ export class MessageComponent implements OnInit {
     this.messagesService.put(this.message);
 
     this.actions = this.folder.actions.reduce((obj, action) => setProp(obj, action, true), {});
+    this.proximalMessageSub = this.proximalMessage$.subscribe(message => this.proximalMessage = message);
   }
 
   /**
@@ -109,7 +116,7 @@ export class MessageComponent implements OnInit {
    * - show that message
    */
   remove(message) {
-    const nextMessageId = this.nextMessageGetter(message._id);
+    const nextMessageId = this.proximalMessage && this.proximalMessage._id;
     const nextState = nextMessageId ? 'mymessages.messagelist.message' : 'mymessages.messagelist';
     const params = { messageId: nextMessageId };
 

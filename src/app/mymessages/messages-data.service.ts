@@ -4,6 +4,7 @@ import { AppConfigService, SortOrder } from '../global/app-config.service';
 import { Folder } from './folders-data.service';
 
 export interface Message {
+  read: boolean;
   folder: string;
   body: string;
   subject: string;

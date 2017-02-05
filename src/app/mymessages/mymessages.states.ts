@@ -76,6 +76,14 @@ export function getMessage(messagesService: MessagesDataService, transition: Tra
   return messagesService.get(transition.params().messageId);
 }
 
+export function getProximalMessage(messages$, message) {
+  return messages$.map(messages => {
+    const curIdx = messages.indexOf(message);
+    const nextIdx = curIdx === messages.length ? curIdx - 1 : curIdx + 1;
+    return messages[nextIdx];
+  });
+}
+
 /**
  * This state shows the contents of a single message.
  * It also has UI to reply, forward, delete, or edit an existing draft.
@@ -92,9 +100,9 @@ export const messageState: Ng2StateDeclaration = {
   resolve: [
     // Fetch the message from the Messages service using the messageId parameter
     { token: 'message', deps: [MessagesDataService, Transition], resolveFn: getMessage },
-    // Provide the component with a function it can query that returns the closest message id
-    // { token: 'nextMessageGetter', deps: [MessageListUIService, Transition], resolveFn: getMessage }
-    // nextMessageGetter: (MessageListUI, messages) => MessageListUI.proximalMessageId.bind(MessageListUI, messages)
+
+    // Provide the component with the next closest message to activate if the current message is deleted
+    { token: 'proximalMessage$', deps: ['messages$', 'message'], resolveFn: getProximalMessage }
   ],
 };
 
