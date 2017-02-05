@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Transition, StateService, copy, equals } from 'ui-router-core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Transition, StateService, copy, equals, TransitionService } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
 import { AppConfigService } from '../global/app-config.service';
 import { MessagesService } from './messages.service';
+import * as _ from 'lodash';
 
 /**
  * This component composes a message
@@ -17,7 +18,7 @@ import { MessagesService } from './messages.service';
   template: `
     <div class="compose">
       <div class="header">
-        <div class="flex-h"> <label>Recipient</label> <input type="text" id="to" name="to" [(ngModel)="message.to"> </div>
+        <div class="flex-h"> <label>Recipient</label> <input type="text" id="to" name="to" [(ngModel)]="message.to"> </div>
         <div class="flex-h"> <label>Subject</label> <input type="text" id="subject" name="subject" [(ngModel)]="message.subject"> </div>
       </div>
     
@@ -35,13 +36,15 @@ import { MessagesService } from './messages.service';
 `,
   styles: []
 })
-export class ComposeComponent implements OnInit {
+export class ComposeComponent implements OnInit, OnDestroy {
   // data
   pristineMessage;
   message;
   canExit: boolean;
+  deregister: Function;
 
   constructor(public stateService: StateService,
+              public transitionService: TransitionService,
               public DialogService: DialogService,
               public appConfig: AppConfigService,
               public messagesService: MessagesService,
@@ -57,7 +60,16 @@ export class ComposeComponent implements OnInit {
   ngOnInit() {
     const messageParam = this.transition.params().message;
     this.pristineMessage = Object.assign({from: this.appConfig.emailAddress}, messageParam);
-    this.message = copy(this.pristineMessage);
+    this.message = _.cloneDeep(this.pristineMessage);
+
+    // Temporary hack until uiCanExit officially lands in ui-router-ng2 1.0.0-beta.5
+    this.deregister = this.transitionService.onStart({ exiting: 'mymessages.compose' }, () => this.uiCanExit());
+  }
+
+  ngOnDestroy() {
+    if (this.deregister) {
+      this.deregister();
+    }
   }
 
   /**

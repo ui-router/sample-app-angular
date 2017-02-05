@@ -1,8 +1,8 @@
-import { Component, OnInit, Input, Inject, Optional, OnDestroy } from '@angular/core';
-import { StateService, TransitionService, copy, equals } from 'ui-router-core';
+import { Component, OnInit, Input, Inject, OnDestroy } from '@angular/core';
+import { StateService, TransitionService, copy, equals, StateDeclaration } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
-import { UIView } from 'ui-router-ng2';
 import { ContactsService } from './contacts.service';
+import * as _ from 'lodash';
 
 /**
  * The EditContact component
@@ -60,22 +60,23 @@ import { ContactsService } from './contacts.service';
 export class EditContactComponent implements OnInit, OnDestroy {
   @Input() pristineContact;
   contact;
-  state;
-  deregister;
+  deregister: Function;
   canExit: boolean;
 
   constructor(public $state: StateService,
               public dialogService: DialogService,
               public contactsService: ContactsService,
-              @Optional() @Inject(UIView.PARENT_INJECT) view: any,
-              public $trans: TransitionService) {
-    this.state = view && view.context && view.context.name;
+              // The state that is routing to the component, which could
+              // be either contacts.new or contacts.contact.edit
+              @Inject('$state$') public $state$: StateDeclaration,
+              public transitionService: TransitionService) {
   }
 
   ngOnInit() {
     // Make an editable copy of the pristineContact
-    this.contact = copy(this.pristineContact);
-    this.deregister = this.$trans.onBefore({ exiting: this.state }, () => this.uiCanExit());
+    this.contact = _.cloneDeep(this.pristineContact);
+    // Hack until official support for uiCanExit lands in ui-router-ng2 1.0.0-beta.5
+    this.deregister = this.transitionService.onStart({ exiting: this.$state$.name }, () => this.uiCanExit());
   }
 
   ngOnDestroy() {
@@ -91,7 +92,8 @@ export class EditContactComponent implements OnInit, OnDestroy {
 
     const message = 'You have unsaved changes to this contact.';
     const question = 'Navigate away and lose changes?';
-    return this.dialogService.confirm(message, question);
+    return this.dialogService.confirm(message, question)
+      ;
   }
 
   /** Ask for confirmation, then delete the contact, then go to the grandparent state ('contacts') */
