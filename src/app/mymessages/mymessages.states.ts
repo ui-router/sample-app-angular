@@ -5,7 +5,9 @@ import { MymessagesComponent } from './mymessages.component';
 import { Ng2StateDeclaration } from 'ui-router-ng2';
 import { Transition } from 'ui-router-core';
 import { FoldersDataService, Folder } from './folders-data.service';
-import { MessagesDataService } from './messages-data.service';
+import { MessagesDataService, Message } from './messages-data.service';
+import { AppConfigService, SortOrder } from '../global/app-config.service';
+import { Observable } from 'rxjs/Observable';
 
 export function getFolders(foldersService: FoldersDataService) {
   return foldersService.all();
@@ -37,8 +39,13 @@ export function getFolder(foldersService: FoldersDataService, transition: Transi
   return foldersService.get(transition.params().folderId);
 }
 
-export function getMessages(messagesService: MessagesDataService, folder: Folder) {
-  return messagesService.byFolder(folder);
+export function getMessages(messagesService: MessagesDataService, folder: Folder,
+                            appConfig: AppConfigService): Promise<Observable<Message[]>> {
+  const promise = messagesService.byFolder(folder);
+
+  return promise.then(messages => appConfig.sort$.map(sortOrder =>
+    MessagesDataService.sortedMessages(messages, sortOrder)
+  ));
 }
 
 /**
@@ -60,7 +67,7 @@ export const messageListState = {
 
     // The folder object (from the resolve above) is injected into this resolve
     // The list of message for the folder are fetched from the Messages service
-    { token: 'messages', deps: [MessagesDataService, 'folder'], resolveFn: getMessages },
+    { token: 'messages$', deps: [MessagesDataService, 'folder', AppConfigService], resolveFn: getMessages },
   ],
 };
 

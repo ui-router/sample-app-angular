@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, HostListener, OnDestroy } from '@angular/core';
 import { AppConfigService } from '../global/app-config.service';
-import { Subscription } from 'rxjs/Rx';
+import { Subscription } from 'rxjs/Subscription';
 
 /**
  * A directive (for a table header) which changes the app's sort order
@@ -8,12 +8,16 @@ import { Subscription } from 'rxjs/Rx';
 @Component({
   selector: '[app-sort-messages]',
   template: `
-    <i style='padding-left: 0.25em' class='fa' [class.fa-sort-asc]="asc" [class.fa-sort-desc]="desc"></i>{{ label }}
+    <i style='padding-left: 0.25em' 
+      class='fa' 
+      [class.fa-sort-asc]="asc" 
+      [class.fa-sort-desc]="desc"
+    ></i>{{ label }}
 `,
   styles: []
 })
 export class SortMessagesComponent implements OnInit, OnDestroy {
-  @Input('app-sort-messages') sort: string;
+  @Input('prop') prop: string;
   @Input('label') label: string;
   private _sub: Subscription;
   public asc: boolean;
@@ -31,18 +35,13 @@ export class SortMessagesComponent implements OnInit, OnDestroy {
 
   update() {
     const sort = this.appConfig.sort$.value;
-    const matches = sort.sortBy === this.sort;
-    this.asc = matches && sort.order > 0;
-    this.desc = matches && sort.order < 0;
+    const matches = sort.sortBy === this.prop;
+    this.asc = matches && sort.order < 0;
+    this.desc = matches && sort.order > 0;
   }
 
   @HostListener('click', ['$event'])
   onClick(e) {
-    console.log(e);
-    if (this.asc) {
-      this.appConfig.sort = '-' + this.sort;
-    } else {
-      this.appConfig.sort = '+' + this.sort;
-    }
+    this.appConfig.sort = (this.asc ? '+' : '-') + this.prop;
   }
 }

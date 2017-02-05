@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/Rx';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
+export interface SortOrder {
+  sortBy: string;
+  order: number;
+}
 
 /**
  * This service stores and retrieves user preferences in session storage
@@ -7,7 +12,8 @@ import { BehaviorSubject } from 'rxjs/Rx';
 @Injectable()
 export class AppConfigService {
   private _sort = '+date';
-  sort$ = new BehaviorSubject(this.parseSort(this.sort));
+  sort$ = new BehaviorSubject<SortOrder>(this.parseSort(this.sort));
+
   get sort() { return this._sort; }
   set sort(val: string) {
     this._sort = val;
@@ -29,7 +35,7 @@ export class AppConfigService {
     };
   }
 
-  parseSort(sort: string) {
+  parseSort(sort: string): SortOrder {
     const defaultSort = '+date';
     const sortOrder = sort || defaultSort;
     const pattern = /^([+-])(.*)$/;
