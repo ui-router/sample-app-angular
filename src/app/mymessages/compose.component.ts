@@ -2,7 +2,7 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Transition, StateService, copy, equals, TransitionService } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
 import { AppConfigService } from '../global/app-config.service';
-import { MessagesService } from './messages.service';
+import { MessagesDataService } from './messages-data.service';
 import * as _ from 'lodash';
 
 /**
@@ -47,7 +47,7 @@ export class ComposeComponent implements OnInit, OnDestroy {
               public transitionService: TransitionService,
               public DialogService: DialogService,
               public appConfig: AppConfigService,
-              public messagesService: MessagesService,
+              public messagesService: MessagesDataService,
               public transition: Transition,
   ) { }
 

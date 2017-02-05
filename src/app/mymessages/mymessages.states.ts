@@ -4,10 +4,10 @@ import { MessageComponent } from './message.component';
 import { MymessagesComponent } from './mymessages.component';
 import { Ng2StateDeclaration } from 'ui-router-ng2';
 import { Transition } from 'ui-router-core';
-import { FoldersService } from './folders.service';
-import { MessagesService } from './messages.service';
+import { FoldersDataService, Folder } from './folders-data.service';
+import { MessagesDataService } from './messages-data.service';
 
-export function getFolders(foldersService: FoldersService) {
+export function getFolders(foldersService: FoldersDataService) {
   return foldersService.all();
 }
 
@@ -24,7 +24,7 @@ export const mymessagesState: Ng2StateDeclaration = {
   component: MymessagesComponent,
   resolve: [
     // All the folders are fetched from the Folders service
-    { token: 'folders', deps: [FoldersService], resolveFn: getFolders },
+    { token: 'folders', deps: [FoldersDataService], resolveFn: getFolders },
   ],
   // If mymessages state is directly activated, redirect the transition to the child state 'mymessages.messagelist'
   redirectTo: 'mymessages.messagelist',
@@ -33,11 +33,11 @@ export const mymessagesState: Ng2StateDeclaration = {
 };
 
 
-export function getFolder(foldersService: FoldersService, transition: Transition) {
+export function getFolder(foldersService: FoldersDataService, transition: Transition) {
   return foldersService.get(transition.params().folderId);
 }
 
-export function getMessages(messagesService: MessagesService, folder) {
+export function getMessages(messagesService: MessagesDataService, folder: Folder) {
   return messagesService.byFolder(folder);
 }
 
@@ -56,16 +56,16 @@ export const messageListState = {
   },
   resolve: [
     // Fetch the current folder from the Folders service, using the folderId parameter
-    { token: 'folder', deps: [FoldersService, Transition], resolveFn: getFolder },
+    { token: 'folder', deps: [FoldersDataService, Transition], resolveFn: getFolder },
 
-    // The resolved folder object (from the resolve above) is injected into this resolve
+    // The folder object (from the resolve above) is injected into this resolve
     // The list of message for the folder are fetched from the Messages service
-    { token: 'messages', deps: [MessagesService, 'folder'], resolveFn: getMessages },
+    { token: 'messages', deps: [MessagesDataService, 'folder'], resolveFn: getMessages },
   ],
 };
 
 
-export function getMessage(messagesService: MessagesService, transition: Transition) {
+export function getMessage(messagesService: MessagesDataService, transition: Transition) {
   return messagesService.get(transition.params().messageId);
 }
 
@@ -84,7 +84,7 @@ export const messageState: Ng2StateDeclaration = {
   },
   resolve: [
     // Fetch the message from the Messages service using the messageId parameter
-    { token: 'message', deps: [MessagesService, Transition], resolveFn: getMessage },
+    { token: 'message', deps: [MessagesDataService, Transition], resolveFn: getMessage },
     // Provide the component with a function it can query that returns the closest message id
     // { token: 'nextMessageGetter', deps: [MessageListUIService, Transition], resolveFn: getMessage }
     // nextMessageGetter: (MessageListUI, messages) => MessageListUI.proximalMessageId.bind(MessageListUI, messages)

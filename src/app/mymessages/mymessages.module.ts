@@ -7,8 +7,8 @@ import { MymessagesComponent } from './mymessages.component';
 import { UIRouterModule } from 'ui-router-ng2';
 import { MYMESSAGES_STATES } from './mymessages.states';
 import { FormsModule } from '@angular/forms';
-import { MessagesService } from './messages.service';
-import { FoldersService } from './folders.service';
+import { MessagesDataService } from './messages-data.service';
+import { FoldersDataService } from './folders-data.service';
 import { FolderListComponent } from './folder-list.component';
 import { MessageTableComponent } from './message-table.component';
 import { SortMessagesComponent } from './sort-messages.component';
@@ -31,8 +31,8 @@ import { FormatMessagePipe } from './format-message.pipe';
     FormatMessagePipe,
   ],
   providers: [
-    MessagesService,
-    FoldersService,
+    MessagesDataService,
+    FoldersDataService,
   ]
 })
 export class MymessagesModule { }

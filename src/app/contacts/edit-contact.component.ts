@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Inject, OnDestroy } from '@angular/core';
 import { StateService, TransitionService, copy, equals, StateDeclaration } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
-import { ContactsService } from './contacts.service';
+import { ContactsDataService } from './contacts-data.service';
 import * as _ from 'lodash';
 
 /**
@@ -65,7 +65,7 @@ export class EditContactComponent implements OnInit, OnDestroy {
 
   constructor(public $state: StateService,
               public dialogService: DialogService,
-              public contactsService: ContactsService,
+              public contactsService: ContactsDataService,
               // The state that is routing to the component, which could
               // be either contacts.new or contacts.contact.edit
               @Inject('$state$') public $state$: StateDeclaration,

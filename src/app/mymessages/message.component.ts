@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { setProp } from '../util/util';
 import { DialogService } from '../global/dialog.service';
-import { MessagesService } from './messages.service';
+import { MessagesDataService } from './messages-data.service';
 import { StateService } from 'ui-router-core';
 
 /**
@@ -61,7 +61,7 @@ export class MessageComponent implements OnInit {
 
   constructor(public stateService: StateService,
               public dialog: DialogService,
-              public messagesService: MessagesService
+              public messagesService: MessagesDataService
   ) { }
 
   /**

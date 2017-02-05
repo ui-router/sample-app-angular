@@ -3,7 +3,7 @@ import {Ng2StateDeclaration} from 'ui-router-ng2';
 import {ContactComponent} from './contact.component';
 import {ContactsComponent} from './contacts.component';
 import {EditContactComponent} from './edit-contact.component';
-import { ContactsService } from './contacts.service';
+import { ContactsDataService } from './contacts-data.service';
 import { Transition } from 'ui-router-core';
 
 
@@ -24,7 +24,7 @@ export const contactsState: Ng2StateDeclaration = {
   component: ContactsComponent,
   resolve: [
     // Resolve all the contacts.  The resolved contacts are injected into the controller.
-    { token: 'contacts', deps: [ContactsService], resolveFn: getAllContacts },
+    { token: 'contacts', deps: [ContactsDataService], resolveFn: getAllContacts },
   ],
   data: { requiresAuth: true },
 };
@@ -45,7 +45,7 @@ export const viewContactState: Ng2StateDeclaration = {
   resolve: [
     // Resolve the contact, based on the contactId parameter value.
     // The resolved contact is provided to the contactComponent's contact binding
-    { token: 'contact', deps: [ContactsService, Transition], resolveFn: getOneContact },
+    { token: 'contact', deps: [ContactsDataService, Transition], resolveFn: getOneContact },
   ],
 };
 
