@@ -12,6 +12,7 @@ import { FoldersService } from './folders.service';
 import { FolderListComponent } from './folder-list.component';
 import { MessageTableComponent } from './message-table.component';
 import { SortMessagesComponent } from './sort-messages.component';
+import { FormatMessagePipe } from './format-message.pipe';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { SortMessagesComponent } from './sort-messages.component';
     MymessagesComponent,
     FolderListComponent,
     MessageTableComponent,
-    SortMessagesComponent
+    SortMessagesComponent,
+    FormatMessagePipe,
   ],
   providers: [
     MessagesService,
