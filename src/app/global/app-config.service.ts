@@ -21,6 +21,14 @@ export class AppConfigService {
     this.load();
   }
 
+  toObject() {
+    return {
+      sort: this.sort,
+      emailAddress: this.emailAddress,
+      restDelay: this.restDelay,
+    };
+  }
+
   parseSort(sort: string) {
     const defaultSort = '+date';
     const sortOrder = sort || defaultSort;
@@ -33,14 +41,16 @@ export class AppConfigService {
 
   load() {
     try {
-      return Object.assign(this, JSON.parse(sessionStorage.getItem('appConfig')));
+      const data = JSON.parse(sessionStorage.getItem('appConfig'));
+      return Object.assign(this, data);
     } catch (Error) { }
 
     return this;
   }
 
   save() {
-    sessionStorage.setItem('appConfig', JSON.stringify(Object.assign({}, this)));
+    const string = JSON.stringify(this.toObject());
+    sessionStorage.setItem('appConfig', string);
   }
 
 }
