@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { wait } from '../util/util';
 
 @Component({
@@ -20,7 +20,8 @@ import { wait } from '../util/util';
   styles: []
 })
 export class DialogComponent implements OnInit {
-  visible: boolean;
+  @HostBinding('class.dialog') dialog = true;
+  @HostBinding('class.active') visible: boolean;
 
   message: string;
   details: string;
