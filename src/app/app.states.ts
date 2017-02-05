@@ -97,6 +97,13 @@ export const prefsFutureState = {
   loadChildren: './prefs/prefs.module#PrefsModule'
 };
 
+// This future state is a placeholder for the lazy loaded My Messages feature module
+export const mymessagesFutureState = {
+  name: 'mymessages.**',
+  url: '/mymessages',
+  loadChildren: './mymessages/mymessages.module#MymessagesModule'
+};
+
 export const APP_STATES = [
   appState,
   welcomeState,
@@ -104,4 +111,5 @@ export const APP_STATES = [
   loginState,
   contactsFutureState,
   prefsFutureState,
+  mymessagesFutureState,
 ];
