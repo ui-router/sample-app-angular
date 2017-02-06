@@ -32,7 +32,8 @@ import { routerConfigFn } from './router.config';
     HttpModule
   ],
   providers: [
-    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }
+    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader },
+    { provide: 'PARENT_STATE', useValue: 'app' },
   ],
   bootstrap: [UIView]
 })

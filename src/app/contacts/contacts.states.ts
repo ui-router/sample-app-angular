@@ -18,7 +18,6 @@ export function getAllContacts(contactSvc) {
  * The contacts are fetched using a resolve.
  */
 export const contactsState: Ng2StateDeclaration = {
-  parent: 'app', // declares that 'contacts' is a child of 'app'
   name: 'contacts',
   url: '/contacts',
   component: ContactsComponent,
