@@ -22,13 +22,12 @@ import { AppConfigService } from './global/app-config.service';
     
         <div>
           <label for="username">Username:</label>
-          <select class="form-control" name="username" id="username"
-            [(ngModel)]="credentials.username" ng-options="username for username in $ctrl.usernames">
+          <select class="form-control" name="username" id="username" [(ngModel)]="credentials.username">
             <option *ngFor="let username of usernames" [value]="username">{{username}}</option>
           </select>
           
           <i style="position: relative; bottom: 1.8em; margin-left: 10em; height: 0"
-              [hidden]="credentials.username" class="fa fa-arrow-left bounce-horizontal"> Choose </i>
+              *ngIf="!credentials.username" class="fa fa-arrow-left bounce-horizontal"> Choose </i>
         </div>
         <br>
     
@@ -36,7 +35,7 @@ import { AppConfigService } from './global/app-config.service';
           <label for="password">Password:</label>
           <input class="form-control" type="password" name="password" [(ngModel)]="credentials.password">
           <i style="position: relative; bottom: 1.8em; margin-left: 5em; height: 0"
-              [hidden]="!credentials.username || credentials.password == 'password'" class="fa fa-arrow-left bounce-horizontal">
+              *ngIf="credentials.username && credentials.password !== 'password'" class="fa fa-arrow-left bounce-horizontal">
             Enter '<b>password</b>' here
           </i>
         </div>
@@ -46,9 +45,9 @@ import { AppConfigService } from './global/app-config.service';
         <hr>
         <div>
           <button class="btn btn-primary" type="button" [disabled]="authenticating" (click)="login(credentials)">
-            <i class="fa fa-spin fa-spinner" [hidden]="!authenticating"></i> <span>Log in</span>
+            <i class="fa fa-spin fa-spinner" *ngIf="authenticating"></i> <span>Log in</span>
           </button>
-          <i [hidden]="!credentials.username && credentials.password == 'password'" 
+          <i *ngIf="credentials.username || credentials.password !== 'password'" 
           style="position: relative;" class="fa fa-arrow-left bounce-horizontal"> Click Me!</i>
         </div>
       </div>
