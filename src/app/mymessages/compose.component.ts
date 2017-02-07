@@ -28,8 +28,8 @@ import { copy } from '../util/util';
         <div class="buttons">
           <!-- Clicking this button brings the user back to the state they came from (previous state) -->
           <button class="btn btn-primary" (click)="gotoPreviousState()"><i class="fa fa-times-circle-o"></i><span>Cancel</span></button>
-          <button class="btn btn-primary" (click)="save($ctrl.message)"><i class="fa fa-save"></i><span>Save as Draft</span></button>
-          <button class="btn btn-primary" (click)="send($ctrl.message)"><i class="fa fa-paper-plane-o"></i><span>Send</span></button>
+          <button class="btn btn-primary" (click)="save(message)"><i class="fa fa-save"></i><span>Save as Draft</span></button>
+          <button class="btn btn-primary" (click)="send(message)"><i class="fa fa-paper-plane-o"></i><span>Send</span></button>
         </div>
       </div>
     </div>
