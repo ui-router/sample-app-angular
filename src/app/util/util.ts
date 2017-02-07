@@ -1,3 +1,4 @@
+import { pattern, isObject, identity, val } from 'ui-router-core';
 /** Some utility functions used by the application */
 
 export const setProp = (obj, key, val) => { obj[key] = val; return obj; };
@@ -8,4 +9,10 @@ const guidChar = (c) => c !== 'x' && c !== 'y' ? '-' : Math.floor(Math.random() 
 export const guid = () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.split('').map(guidChar).join('');
 // A function that returns a promise which resolves after a timeout
 export const wait = (delay) => new Promise(resolve => setTimeout(resolve, delay));
+
+export const copy = pattern([
+  [Array.isArray, val => val.map(copy)],
+  [isObject, val => Object.keys(val).reduce((acc, key) => (acc[key] = copy(val[key]), acc), {})],
+  [val(true), identity ]
+]);
 

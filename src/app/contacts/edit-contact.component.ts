@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Inject, OnDestroy } from '@angular/core';
-import { StateService, TransitionService, copy, equals, StateDeclaration } from 'ui-router-core';
+import { StateService, TransitionService, equals, StateDeclaration } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
 import { ContactsDataService } from './contacts-data.service';
-import * as _ from 'lodash';
+import { copy } from '../util/util';
 
 /**
  * The EditContact component
@@ -74,7 +74,7 @@ export class EditContactComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Make an editable copy of the pristineContact
-    this.contact = _.cloneDeep(this.pristineContact);
+    this.contact = copy(this.pristineContact);
     // Hack until official support for uiCanExit lands in ui-router-ng2 1.0.0-beta.5
     this.deregister = this.transitionService.onStart({ exiting: this.$state$.name }, () => this.uiCanExit());
   }

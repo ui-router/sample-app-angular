@@ -1,9 +1,9 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Transition, StateService, copy, equals, TransitionService } from 'ui-router-core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Transition, StateService, equals, TransitionService } from 'ui-router-core';
 import { DialogService } from '../global/dialog.service';
 import { AppConfigService } from '../global/app-config.service';
 import { MessagesDataService } from './messages-data.service';
-import * as _ from 'lodash';
+import { copy } from '../util/util';
 
 /**
  * This component composes a message
@@ -60,7 +60,7 @@ export class ComposeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     const messageParam = this.transition.params().message;
     this.pristineMessage = Object.assign({from: this.appConfig.emailAddress}, messageParam);
-    this.message = _.cloneDeep(this.pristineMessage);
+    this.message = copy(this.pristineMessage);
 
     // Temporary hack until uiCanExit officially lands in ui-router-ng2 1.0.0-beta.5
     this.deregister = this.transitionService.onStart({ exiting: 'mymessages.compose' }, () => this.uiCanExit());
