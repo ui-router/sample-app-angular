@@ -82,7 +82,7 @@ var AppConfigService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_config_service__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(271);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -155,6 +155,38 @@ var AuthService = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ui_router_core__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ui_router_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ui_router_core__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return setProp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return pushToArr; });
+/* unused harmony export uniqReduce */
+/* unused harmony export flattenReduce */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return guid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return wait; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return copy; });
+
+/** Some utility functions used by the application */
+var setProp = function (obj, key, val) { obj[key] = val; return obj; };
+var pushToArr = function (array, item) { array.push(item); return array; };
+var uniqReduce = function (arr, item) { return arr.indexOf(item) !== -1 ? arr : pushToArr(arr, item); };
+var flattenReduce = function (arr, item) { return arr.concat(item); };
+var guidChar = function (c) { return c !== 'x' && c !== 'y' ? '-' : Math.floor(Math.random() * 16).toString(16).toUpperCase(); };
+var guid = function () { return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.split('').map(guidChar).join(''); };
+// A function that returns a promise which resolves after a timeout
+var wait = function (delay) { return new Promise(function (resolve) { return setTimeout(resolve, delay); }); };
+var copy = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ui_router_core__["pattern"])([
+    [Array.isArray, function (val) { return val.map(copy); }],
+    [__WEBPACK_IMPORTED_MODULE_0_ui_router_core__["isObject"], function (val) { return Object.keys(val).reduce(function (acc, key) { return (acc[key] = copy(val[key]), acc); }, {}); }],
+    [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ui_router_core__["val"])(true), __WEBPACK_IMPORTED_MODULE_0_ui_router_core__["identity"]]
+]);
+//# sourceMappingURL=/Users/christhielen/projects/sample-app-ng2/src/util.js.map
+
+/***/ }),
+
+/***/ 272:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dialog_component__ = __webpack_require__(354);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogService; });
@@ -198,35 +230,12 @@ var DialogService = (function () {
 
 /***/ }),
 
-/***/ 272:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return setProp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return pushToArr; });
-/* unused harmony export uniqReduce */
-/* unused harmony export flattenReduce */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return guid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return wait; });
-/** Some utility functions used by the application */
-var setProp = function (obj, key, val) { obj[key] = val; return obj; };
-var pushToArr = function (array, item) { array.push(item); return array; };
-var uniqReduce = function (arr, item) { return arr.indexOf(item) !== -1 ? arr : pushToArr(arr, item); };
-var flattenReduce = function (arr, item) { return arr.concat(item); };
-var guidChar = function (c) { return c !== 'x' && c !== 'y' ? '-' : Math.floor(Math.random() * 16).toString(16).toUpperCase(); };
-var guid = function () { return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.split('').map(guidChar).join(''); };
-// A function that returns a promise which resolves after a timeout
-var wait = function (delay) { return new Promise(function (resolve) { return setTimeout(resolve, delay); }); };
-//# sourceMappingURL=/Users/christhielen/projects/sample-app-ng2/src/util.js.map
-
-/***/ }),
-
 /***/ 353:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__global_dialog_service__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__global_dialog_service__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ui_router_core__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ui_router_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ui_router_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_auth_service__ = __webpack_require__(157);
@@ -297,7 +306,7 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(271);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -459,7 +468,7 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* Component */])({
             selector: 'app-login',
-            template: "\n    <div class=\"container\">\n      <div class=\"col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2\">\n        <h3>Log In</h3>\n        <p>\n          (This login screen is for demonstration only... \n          just pick a username, enter 'password' and click <b>\"Log in\"</b>)</p>\n        <hr>\n    \n        <div>\n          <label for=\"username\">Username:</label>\n          <select class=\"form-control\" name=\"username\" id=\"username\"\n            [(ngModel)]=\"credentials.username\" ng-options=\"username for username in $ctrl.usernames\">\n            <option *ngFor=\"let username of usernames\" [value]=\"username\">{{username}}</option>\n          </select>\n          \n          <i style=\"position: relative; bottom: 1.8em; margin-left: 10em; height: 0\"\n              [hidden]=\"credentials.username\" class=\"fa fa-arrow-left bounce-horizontal\"> Choose </i>\n        </div>\n        <br>\n    \n        <div>\n          <label for=\"password\">Password:</label>\n          <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"credentials.password\">\n          <i style=\"position: relative; bottom: 1.8em; margin-left: 5em; height: 0\"\n              [hidden]=\"!credentials.username || credentials.password == 'password'\" class=\"fa fa-arrow-left bounce-horizontal\">\n            Enter '<b>password</b>' here\n          </i>\n        </div>\n    \n        <div [hidden]=\"!errorMessage\" class=\"well error\">{{ errorMessage }}</div>\n    \n        <hr>\n        <div>\n          <button class=\"btn btn-primary\" type=\"button\" [disabled]=\"authenticating\" (click)=\"login(credentials)\">\n            <i class=\"fa fa-spin fa-spinner\" [hidden]=\"!authenticating\"></i> <span>Log in</span>\n          </button>\n          <i [hidden]=\"!credentials.username && credentials.password == 'password'\" \n          style=\"position: relative;\" class=\"fa fa-arrow-left bounce-horizontal\"> Click Me!</i>\n        </div>\n      </div>\n    </div>\n",
+            template: "\n    <div class=\"container\">\n      <div class=\"col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2\">\n        <h3>Log In</h3>\n        <p>\n          (This login screen is for demonstration only... \n          just pick a username, enter 'password' and click <b>\"Log in\"</b>)</p>\n        <hr>\n    \n        <div>\n          <label for=\"username\">Username:</label>\n          <select class=\"form-control\" name=\"username\" id=\"username\" [(ngModel)]=\"credentials.username\">\n            <option *ngFor=\"let username of usernames\" [value]=\"username\">{{username}}</option>\n          </select>\n          \n          <i style=\"position: relative; bottom: 1.8em; margin-left: 10em; height: 0\"\n              *ngIf=\"!credentials.username\" class=\"fa fa-arrow-left bounce-horizontal\"> Choose </i>\n        </div>\n        <br>\n    \n        <div>\n          <label for=\"password\">Password:</label>\n          <input class=\"form-control\" type=\"password\" name=\"password\" [(ngModel)]=\"credentials.password\">\n          <i style=\"position: relative; bottom: 1.8em; margin-left: 5em; height: 0\"\n              *ngIf=\"credentials.username && credentials.password !== 'password'\" class=\"fa fa-arrow-left bounce-horizontal\">\n            Enter '<b>password</b>' here\n          </i>\n        </div>\n    \n        <div [hidden]=\"!errorMessage\" class=\"well error\">{{ errorMessage }}</div>\n    \n        <hr>\n        <div>\n          <button class=\"btn btn-primary\" type=\"button\" [disabled]=\"authenticating\" (click)=\"login(credentials)\">\n            <i class=\"fa fa-spin fa-spinner\" *ngIf=\"authenticating\"></i> <span>Log in</span>\n          </button>\n          <i *ngIf=\"credentials.username || credentials.password !== 'password'\" \n          style=\"position: relative;\" class=\"fa fa-arrow-left bounce-horizontal\"> Click Me!</i>\n        </div>\n      </div>\n    </div>\n",
             styles: []
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__global_app_config_service__["a" /* AppConfigService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__global_app_config_service__["a" /* AppConfigService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__global_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__global_auth_service__["a" /* AuthService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ui_router_core__["StateService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ui_router_core__["StateService"]) === 'function' && _d) || Object])
@@ -612,6 +621,7 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_8_ui_router_ng2__["UIRouterModule"].forRoot({
                     states: __WEBPACK_IMPORTED_MODULE_9__app_states__["a" /* APP_STATES */],
+                    useHash: true,
                     otherwise: { state: 'home' },
                     config: __WEBPACK_IMPORTED_MODULE_11__router_config__["a" /* routerConfigFn */],
                 }),
@@ -641,6 +651,8 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__welcome_component__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ui_router_core__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ui_router_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_ui_router_core__);
 /* unused harmony export appState */
 /* unused harmony export welcomeState */
 /* unused harmony export homeState */
@@ -650,6 +662,7 @@ var AppModule = (function () {
 /* unused harmony export prefsFutureState */
 /* unused harmony export mymessagesFutureState */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APP_STATES; });
+
 
 
 
@@ -699,7 +712,9 @@ var loginState = {
     name: 'login',
     url: '/login',
     component: __WEBPACK_IMPORTED_MODULE_3__login_component__["a" /* LoginComponent */],
-    resolve: { returnTo: returnTo }
+    resolve: [
+        { token: 'returnTo', deps: [__WEBPACK_IMPORTED_MODULE_4_ui_router_core__["Transition"]], resolveFn: returnTo },
+    ]
 };
 /**
  * A resolve function for 'login' state which figures out what state to return to, after a successful login.
@@ -800,7 +815,7 @@ function requiresAuthHook(transitionService) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_config_service__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth_service__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dialog_component__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dialog_service__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dialog_service__ = __webpack_require__(272);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

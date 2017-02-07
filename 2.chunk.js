@@ -7,8 +7,8 @@ webpackJsonp([2,7],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prefs_component__ = __webpack_require__(799);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__prefs_states__ = __webpack_require__(808);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prefs_component__ = __webpack_require__(797);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__prefs_states__ = __webpack_require__(806);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ui_router_ng2__ = __webpack_require__(440);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(439);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrefsModule", function() { return PrefsModule; });
@@ -49,7 +49,7 @@ var PrefsModule = (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 797:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102,11 +102,11 @@ var PrefsComponent = (function () {
 
 /***/ }),
 
-/***/ 808:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__prefs_component__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__prefs_component__ = __webpack_require__(797);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return prefsState; });
 
 /**
