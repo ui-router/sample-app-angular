@@ -1,6 +1,6 @@
 import { Component, ViewChild, ViewContainerRef, OnInit } from '@angular/core';
 import { DialogService } from './global/dialog.service';
-import { StateService } from 'ui-router-core';
+import { StateService } from '@uirouter/core';
 import { AuthService } from './global/auth.service';
 import { AppConfigService } from './global/app-config.service';
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Transition, StateService, equals, TransitionService } from 'ui-router-core';
+import { Transition, StateService, equals, TransitionService } from '@uirouter/core';
 import { DialogService } from '../global/dialog.service';
 import { AppConfigService } from '../global/app-config.service';
 import { MessagesDataService } from './messages-data.service';

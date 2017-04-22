@@ -109,7 +109,7 @@ export class SessionStorage<T> {
   }
 
   /** Returns a promise to remove (DELETE) an item. */
-  remove(item, eqFn = this._eqFn): Promise<T> {
+  remove(item: T, eqFn = this._eqFn): Promise<T> {
     return this.all().then(items => {
       const idx = items.findIndex(eqFn.bind(null, item));
       if (idx === -1) {

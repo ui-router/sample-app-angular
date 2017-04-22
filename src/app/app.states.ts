@@ -2,7 +2,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome.component';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login.component';
-import { Transition } from 'ui-router-core';
+import { Transition } from '@uirouter/core';
 
 /**
  * This is the parent state for the entire application.

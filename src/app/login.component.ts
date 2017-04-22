@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TargetState, StateService } from 'ui-router-core';
+import { TargetState, StateService } from '@uirouter/core';
 import { AuthService } from './global/auth.service';
 import { AppConfigService } from './global/app-config.service';
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Inject, OnDestroy } from '@angular/core';
-import { StateService, TransitionService, equals, StateDeclaration } from 'ui-router-core';
+import { StateService, TransitionService, equals, StateDeclaration } from '@uirouter/core';
 import { DialogService } from '../global/dialog.service';
 import { ContactsDataService } from './contacts-data.service';
 import { copy } from '../util/util';

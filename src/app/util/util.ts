@@ -1,4 +1,4 @@
-import { pattern, isObject, identity, val } from 'ui-router-core';
+import { pattern, isObject, identity, val } from '@uirouter/core';
 /** Some utility functions used by the application */
 
 export const setProp = (obj, key, val) => { obj[key] = val; return obj; };

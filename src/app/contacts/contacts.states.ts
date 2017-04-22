@@ -4,7 +4,7 @@ import {ContactComponent} from './contact.component';
 import {ContactsComponent} from './contacts.component';
 import {EditContactComponent} from './edit-contact.component';
 import { ContactsDataService } from './contacts-data.service';
-import { Transition } from 'ui-router-core';
+import { Transition } from '@uirouter/core';
 
 
 export function getAllContacts(contactSvc) {

@@ -3,7 +3,7 @@ import { MessageListComponent } from './message-list.component';
 import { MessageComponent } from './message.component';
 import { MymessagesComponent } from './mymessages.component';
 import { Ng2StateDeclaration } from 'ui-router-ng2';
-import { Transition } from 'ui-router-core';
+import { Transition } from '@uirouter/core';
 import { FoldersDataService, Folder } from './folders-data.service';
 import { MessagesDataService, Message } from './messages-data.service';
 import { AppConfigService, SortOrder } from '../global/app-config.service';

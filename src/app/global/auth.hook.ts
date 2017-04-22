@@ -1,4 +1,4 @@
-import { TransitionService } from 'ui-router-core';
+import { TransitionService } from '@uirouter/core';
 import { AuthService } from './auth.service';
 
 /**

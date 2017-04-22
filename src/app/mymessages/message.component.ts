@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { setProp } from '../util/util';
 import { DialogService } from '../global/dialog.service';
 import { MessagesDataService, Message } from './messages-data.service';
-import { StateService } from 'ui-router-core';
+import { StateService } from '@uirouter/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Observable';
 import { Folder } from './folders-data.service';

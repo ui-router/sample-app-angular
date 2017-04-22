@@ -40,7 +40,7 @@ export class AuthService {
 
     return wait(800)
       .then(checkCredentials)
-      .then((authenticatedUser) => {
+      .then((authenticatedUser: string) => {
         appConfig.emailAddress = authenticatedUser;
         appConfig.save();
       });
