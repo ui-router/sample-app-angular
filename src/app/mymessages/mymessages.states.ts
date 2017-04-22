@@ -24,6 +24,7 @@ export const mymessagesState: Ng2StateDeclaration = {
   name: 'mymessages',
   url: '/mymessages',
   component: MymessagesComponent,
+  bindings: { folders: 'folders' },
   resolve: [
     // All the folders are fetched from the Folders service
     { token: 'folders', deps: [FoldersDataService], resolveFn: getFolders },
@@ -59,7 +60,10 @@ export const messageListState = {
   params: { folderId: 'inbox' },
   views: {
     // This targets the "messagelist" named ui-view added to the DOM in the parent state 'mymessages'
-    messagelist: { component: MessageListComponent },
+    messagelist: {
+      component: MessageListComponent,
+      bindings: { folder: 'folder', messages$: 'messages$' },
+    },
   },
   resolve: [
     // Fetch the current folder from the Folders service, using the folderId parameter
@@ -95,7 +99,10 @@ export const messageState: Ng2StateDeclaration = {
     // Relatively target the parent-state's parent-state's 'messagecontent' ui-view
     // This could also have been written using ui-view@state addressing: 'messagecontent@mymessages'
     // Or, this could also have been written using absolute ui-view addressing: '!$default.$default.messagecontent'
-    '^.^.messagecontent': { component: MessageComponent },
+    '^.^.messagecontent': {
+      component: MessageComponent,
+      bindings: { folder: 'folder', message: 'message', proximalMessage$: 'proximalMessage$' },
+    },
   },
   resolve: [
     // Fetch the message from the Messages service using the messageId parameter

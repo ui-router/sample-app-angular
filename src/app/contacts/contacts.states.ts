@@ -22,6 +22,7 @@ export const contactsState: Ng2StateDeclaration = {
   name: 'contacts',
   url: '/contacts',
   component: ContactsComponent,
+  bindings: { contacts: 'contacts' },
   resolve: [
     // Resolve all the contacts.  The resolved contacts are injected into the controller.
     { token: 'contacts', deps: [ContactsDataService], resolveFn: getAllContacts },
@@ -42,6 +43,7 @@ export const viewContactState: Ng2StateDeclaration = {
   name: 'contacts.contact',
   url: '/:contactId',
   component: ContactComponent,
+  bindings: { contact: 'contact' },
   resolve: [
     // Resolve the contact, based on the contactId parameter value.
     // The resolved contact is provided to the contactComponent's contact binding
@@ -66,8 +68,8 @@ export const editContactState: Ng2StateDeclaration = {
     // This could also have been written using ui-view@state addressing: $default@contacts
     // Or, this could also have been written using absolute ui-view addressing: !$default.$default.$default
     '^.^.$default': {
-      bindings: { pristineContact: 'contact' },
       component: EditContactComponent,
+      bindings: { pristineContact: 'contact' },
     }
   },
 };
@@ -86,6 +88,7 @@ export const newContactState: Ng2StateDeclaration = {
   name: 'contacts.new',
   url: '/new',
   component: EditContactComponent,
+  bindings: { pristineContact: 'pristineContact' },
   resolve: [
     { token: 'pristineContact', deps: [], resolveFn: getBlankContact }
   ],
