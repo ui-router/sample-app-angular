@@ -57,10 +57,9 @@ import { copy } from '../util/util';
 `,
   styles: []
 })
-export class EditContactComponent implements OnInit, OnDestroy {
+export class EditContactComponent implements OnInit {
   @Input() pristineContact;
   contact;
-  deregister: Function;
   canExit: boolean;
 
   constructor(public $state: StateService,
@@ -75,25 +74,16 @@ export class EditContactComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Make an editable copy of the pristineContact
     this.contact = copy(this.pristineContact);
-    // Hack until official support for uiCanExit lands in @uirouter/angular 1.0.0-beta.5
-    this.deregister = this.transitionService.onStart({ exiting: this.$state$.name }, () => this.uiCanExit());
-  }
-
-  ngOnDestroy() {
-    if (this.deregister) {
-      this.deregister();
-    }
   }
 
   uiCanExit() {
     if (this.canExit || equals(this.contact, this.pristineContact)) {
-      return Promise.resolve(true);
+      return true;
     }
 
     const message = 'You have unsaved changes to this contact.';
     const question = 'Navigate away and lose changes?';
-    return this.dialogService.confirm(message, question)
-      ;
+    return this.dialogService.confirm(message, question);
   }
 
   /** Ask for confirmation, then delete the contact, then go to the grandparent state ('contacts') */

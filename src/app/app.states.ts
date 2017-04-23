@@ -53,6 +53,7 @@ export const loginState = {
   name: 'login',
   url: '/login',
   component: LoginComponent,
+  bindings: { returnTo: 'returnTo' },
   resolve: [
     { token: 'returnTo', deps: [Transition], resolveFn: returnTo },
   ]

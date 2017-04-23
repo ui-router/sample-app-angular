@@ -36,12 +36,11 @@ import { copy } from '../util/util';
 `,
   styles: []
 })
-export class ComposeComponent implements OnInit, OnDestroy {
+export class ComposeComponent implements OnInit {
   // data
   pristineMessage;
   message;
   canExit: boolean;
-  deregister: Function;
 
   constructor(public stateService: StateService,
               public transitionService: TransitionService,
@@ -61,15 +60,6 @@ export class ComposeComponent implements OnInit, OnDestroy {
     const messageParam = this.transition.params().message;
     this.pristineMessage = Object.assign({from: this.appConfig.emailAddress}, messageParam);
     this.message = copy(this.pristineMessage);
-
-    // Temporary hack until uiCanExit officially lands in @uirouter/angular 1.0.0-beta.5
-    this.deregister = this.transitionService.onStart({ exiting: 'mymessages.compose' }, () => this.uiCanExit());
-  }
-
-  ngOnDestroy() {
-    if (this.deregister) {
-      this.deregister();
-    }
   }
 
   /**
@@ -78,7 +68,7 @@ export class ComposeComponent implements OnInit, OnDestroy {
    */
   uiCanExit() {
     if (this.canExit || equals(this.pristineMessage, this.message)) {
-      return Promise.resolve(true);
+      return true;
     }
 
     const message = 'You have not saved this message.';
