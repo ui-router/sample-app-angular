@@ -143,4 +143,4 @@
 /******/ })
 /************************************************************************/
 /******/ ([]);
-//# sourceMappingURL=inline.bundle.map
+//# sourceMappingURL=inline.bundle.js.map
