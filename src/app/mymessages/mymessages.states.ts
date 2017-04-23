@@ -2,7 +2,7 @@ import { ComposeComponent } from './compose.component';
 import { MessageListComponent } from './message-list.component';
 import { MessageComponent } from './message.component';
 import { MymessagesComponent } from './mymessages.component';
-import { Ng2StateDeclaration } from 'ui-router-ng2';
+import { Ng2StateDeclaration } from '@uirouter/angular';
 import { Transition } from '@uirouter/core';
 import { FoldersDataService, Folder } from './folders-data.service';
 import { MessagesDataService, Message } from './messages-data.service';

@@ -6,7 +6,7 @@ import { ContactListComponent } from './contact-list.component';
 import { ContactsComponent } from './contacts.component';
 import { EditContactComponent } from './edit-contact.component';
 import { CONTACTS_STATES } from './contacts.states';
-import { UIRouterModule } from 'ui-router-ng2';
+import { UIRouterModule } from '@uirouter/angular';
 import { FormsModule } from '@angular/forms';
 import { ContactsDataService } from './contacts-data.service';
 

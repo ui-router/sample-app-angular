@@ -75,7 +75,7 @@ export class EditContactComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Make an editable copy of the pristineContact
     this.contact = copy(this.pristineContact);
-    // Hack until official support for uiCanExit lands in ui-router-ng2 1.0.0-beta.5
+    // Hack until official support for uiCanExit lands in @uirouter/angular 1.0.0-beta.5
     this.deregister = this.transitionService.onStart({ exiting: this.$state$.name }, () => this.uiCanExit());
   }
 

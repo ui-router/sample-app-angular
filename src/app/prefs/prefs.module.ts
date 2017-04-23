@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrefsComponent } from './prefs.component';
 import { prefsState } from './prefs.states';
-import { UIRouterModule } from 'ui-router-ng2';
+import { UIRouterModule } from '@uirouter/angular';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

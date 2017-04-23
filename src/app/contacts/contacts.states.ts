@@ -1,4 +1,4 @@
-import {Ng2StateDeclaration} from 'ui-router-ng2';
+import {Ng2StateDeclaration} from '@uirouter/angular';
 
 import {ContactComponent} from './contact.component';
 import {ContactsComponent} from './contacts.component';

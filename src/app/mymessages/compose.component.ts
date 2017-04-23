@@ -62,7 +62,7 @@ export class ComposeComponent implements OnInit, OnDestroy {
     this.pristineMessage = Object.assign({from: this.appConfig.emailAddress}, messageParam);
     this.message = copy(this.pristineMessage);
 
-    // Temporary hack until uiCanExit officially lands in ui-router-ng2 1.0.0-beta.5
+    // Temporary hack until uiCanExit officially lands in @uirouter/angular 1.0.0-beta.5
     this.deregister = this.transitionService.onStart({ exiting: 'mymessages.compose' }, () => this.uiCanExit());
   }
 

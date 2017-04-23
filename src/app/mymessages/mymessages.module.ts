@@ -4,7 +4,7 @@ import { ComposeComponent } from './compose.component';
 import { MessageComponent } from './message.component';
 import { MessageListComponent } from './message-list.component';
 import { MymessagesComponent } from './mymessages.component';
-import { UIRouterModule } from 'ui-router-ng2';
+import { UIRouterModule } from '@uirouter/angular';
 import { MYMESSAGES_STATES } from './mymessages.states';
 import { FormsModule } from '@angular/forms';
 import { MessagesDataService } from './messages-data.service';
