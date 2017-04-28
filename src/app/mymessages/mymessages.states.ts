@@ -24,7 +24,6 @@ export const mymessagesState: Ng2StateDeclaration = {
   name: 'mymessages',
   url: '/mymessages',
   component: MymessagesComponent,
-  bindings: { folders: 'folders' },
   resolve: [
     // All the folders are fetched from the Folders service
     { token: 'folders', deps: [FoldersDataService], resolveFn: getFolders },
@@ -62,7 +61,6 @@ export const messageListState = {
     // This targets the "messagelist" named ui-view added to the DOM in the parent state 'mymessages'
     messagelist: {
       component: MessageListComponent,
-      bindings: { folder: 'folder', messages$: 'messages$' },
     },
   },
   resolve: [
@@ -101,7 +99,6 @@ export const messageState: Ng2StateDeclaration = {
     // Or, this could also have been written using absolute ui-view addressing: '!$default.$default.messagecontent'
     '^.^.messagecontent': {
       component: MessageComponent,
-      bindings: { folder: 'folder', message: 'message', proximalMessage$: 'proximalMessage$' },
     },
   },
   resolve: [
