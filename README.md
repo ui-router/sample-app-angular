@@ -1,31 +1,68 @@
-# SampleAppNg2
+## UI-Router for Angular - Sample Application
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+http://ui-router.github.io/sample-app-angular/#/mymessages/inbox/5648b50cc586cac4aed6836f
 
-## Code scaffolding
+This sample app is intended to demonstrate a non-trivial ui-router application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+- Multiple sub-modules
+- Managed state lifecycle
+- Application data lifecycle
+- Authentication (simulated)
+- Authenticated and unauthenticated states
+- REST data retrieval (simulated)
+- Lazy loaded Angular modules (contacts/mymessages/prefs submodules)
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Visualizer
 
-## Running unit tests
+We're using the [State and Transition Visualizer](http://github.com/ui-router/visualizer) to visually represent 
+the current state tree, as well as the transitions between states.
+Explore how transitions work by hovering over them, and clicking to expand details (params and resolves).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Note how states are _entered_ when they were previously not active, _exited_ and re-_entered_ when parameters change,
+ and how parent states whose parameters did not change are _retained_.
+Each of these (_exited, entered, retained_) correspond to a Transition Hook.
 
-## Running end-to-end tests
+### Structure
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+There are many ways to structure a ui-router app.
+We aren't super opinionated on application structure.
+Use what works for you.
+We organized ours in the following way:
 
-## Deploying to GitHub Pages
+- Feature modules
+  - Each feature gets its own directory and Angular Module (`@NgModule`)
+  - Features contain states and components
+  - Specific types of helper code (directives, services, etc) _used only within a feature_ may live in a subdirectory
+  named after its type
+- Leveraging ES6 modules
+  - States for a module are defined in separate file
+  - Each component is defined in its own file
+  - Components are referenced in states where they are composed into the state definition
+  - States export themselves
+  - Each feature `@NgModule` imports and declares all the states for the feature
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### UI-Router Patterns
+  
+- Defining custom, app-specific global behaviors
+  - Add metadata to a state, or state tree (such as `authRequired`)
+  - Check for metadata in transition hooks
+  - Example: `routerhooks/authRequired.js`
+    - If a transition to a state with a truthy `data.authRequired: true` property is started and the user is not currently authenticated
+- Defining a default substate for a top-level state
+  - Example: declaring `redirectTo: 'welcome'` in `app.states.ts`
+- Defining a default parameter for a state
+  - Example: `folderId` parameter defaults to 'inbox' in `mymessages.states.ts` (folder state)
+- Application data lifecycle
+  - Data loading is managed by the state declaration, via the `resolve:` block
+  - Data is fetched before the state is _entered_
+  - Data is fetched according to state parameters
+  - The state is _entered_ when the data is ready
+  - The resolved data is injected into the components
+  - The resolve data remains loaded until the state is exited
+- Lazy Loaded states
+  - The main submodules (and all their states and components) are lazy loaded
+  - The future state includes a `loadChildren` property which is used to lazy load the module
