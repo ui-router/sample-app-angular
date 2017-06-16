@@ -67,6 +67,7 @@ export const editContactState: Ng2StateDeclaration = {
     // Or, this could also have been written using absolute ui-view addressing: !$default.$default.$default
     '^.^.$default': {
       component: EditContactComponent,
+      bindings: { pristineContact: 'contact' },
     }
   },
 };
