@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SessionStorage } from '../util/sessionStorage';
 import { AppConfigService } from '../global/app-config.service';
-
-export interface Folder {
-  _id: string;
-  columns: string[];
-  actions: string[];
-}
+import { Folder } from './interface';
 
 /** A fake REST client API for Folders resources */
 @Injectable()

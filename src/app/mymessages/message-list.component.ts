@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Message } from './messages-data.service';
 import { Observable } from 'rxjs/Observable';
+import { Message } from './interface';
 
 /**
  * This component renders a list of messages using the `messageTable` component

@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { setProp } from '../util/util';
 import { DialogService } from '../global/dialog.service';
-import { MessagesDataService, Message } from './messages-data.service';
+import { MessagesDataService } from './messages-data.service';
 import { StateService } from '@uirouter/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Observable';
-import { Folder } from './folders-data.service';
+import { Folder, Message } from './interface';
 
 /**
  * This component renders a single message

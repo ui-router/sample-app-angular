@@ -1,23 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SessionStorage } from '../util/sessionStorage';
 import { AppConfigService, SortOrder } from '../global/app-config.service';
-import { Folder } from './folders-data.service';
-
-export interface Message {
-  read: boolean;
-  folder: string;
-  body: string;
-  subject: string;
-  from: string;
-  to: string;
-  date: string;
-  senderName: {
-    last: string;
-    first: string
-  };
-  corpus: string;
-  _id: string;
-}
+import { Folder, Message } from './interface';
 
 /** A fake REST client API for Messages resources */
 @Injectable()

@@ -4,10 +4,11 @@ import { MessageComponent } from './message.component';
 import { MymessagesComponent } from './mymessages.component';
 import { Ng2StateDeclaration } from '@uirouter/angular';
 import { Transition } from '@uirouter/core';
-import { FoldersDataService, Folder } from './folders-data.service';
-import { MessagesDataService, Message } from './messages-data.service';
-import { AppConfigService, SortOrder } from '../global/app-config.service';
+import { FoldersDataService } from './folders-data.service';
+import { MessagesDataService } from './messages-data.service';
+import { AppConfigService } from '../global/app-config.service';
 import { Observable } from 'rxjs/Observable';
+import { Folder, Message } from './interface';
 
 export function getFolders(foldersService: FoldersDataService) {
   return foldersService.all();
