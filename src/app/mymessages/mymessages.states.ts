@@ -9,6 +9,7 @@ import { MessagesDataService } from './messages-data.service';
 import { AppConfigService } from '../global/app-config.service';
 import { Observable } from 'rxjs/Observable';
 import { Folder, Message } from './interface';
+import 'rxjs/add/operator/map';
 
 export function getFolders(foldersService: FoldersDataService) {
   return foldersService.all();
