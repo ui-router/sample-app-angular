@@ -13,16 +13,16 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "4.4.4",
-    "@angular/compiler": "4.4.4",
-    "@angular/core": "4.4.4",
-    "@angular/forms": "4.4.4",
-    "@angular/http": "4.4.4",
-    "@angular/platform-browser": "4.4.4",
-    "@angular/platform-browser-dynamic": "4.4.4",
-    "@angular/router": "4.4.4",
-    "@ngtools/webpack": "1.7.2",
-    "@uirouter/angular": "1.0.0-beta.7",
+    "@angular/common": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/core": "5.0.0",
+    "@angular/forms": "5.0.0",
+    "@angular/http": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@angular/router": "5.0.0",
+    "@ngtools/webpack": "1.8.0",
+    "@uirouter/angular": "1.0.0-beta.9",
     "@uirouter/visualizer": "4.0.2",
     "bootstrap": "^3.3.7",
     "core-js": "2.5.1",
@@ -32,8 +32,8 @@
     "zone.js": "0.8.5"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.4",
-    "@angular/compiler-cli": "4.4.4",
+    "@angular/cli": "1.5.0",
+    "@angular/compiler-cli": "5.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "@types/whatwg-fetch": "0.0.33",
@@ -49,6 +49,6 @@
     "shx": "^0.2.2",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
-    "typescript": "~2.3.0"
+    "typescript": "2.4.2"
   }
 }
