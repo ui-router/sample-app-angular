@@ -1,5 +1,6 @@
 ## UI-Router for Angular - Sample Application
 
+[![Travis badge](https://travis-ci.org/ui-router/sample-app-angular.svg?branch=master)](https://travis-ci.org/ui-router/sample-app-angular)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ui-router/sample-app-angular.svg)](https://greenkeeper.io/)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
