@@ -129,7 +129,7 @@ describe('authenticated sample app', () => {
     cy.url().should('include', '#/mymessages/inbox');
     cy.contains('New Message').click();
     cy.get('input#to').type('somebody@somewhere.com');
-    cy.get('li').contains('Contacts').click();
+    cy.get('button').contains('Cancel').click();
 
     cy.get('.backdrop');
     cy.contains('Navigate away');
@@ -138,13 +138,15 @@ describe('authenticated sample app', () => {
     cy.url().should('include', '#/mymessages/compose');
 
 
-    cy.get('li').contains('Contacts').click();
+    cy.get('button').contains('Cancel').click();
     cy.get('.backdrop');
     cy.contains('Navigate away');
     cy.get('button').contains('Yes').click();
     cy.get('.backdrop').should('not.exist');
-    cy.contains('New Contact');
-    cy.url().should('include', '#/contacts');
+
+    cy.contains('Sender');
+    cy.contains('Subject');
+    cy.url().should('include', '#/mymessages/inbox');
   });
 
   it('navigates through folders', () => {
