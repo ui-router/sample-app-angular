@@ -1,5 +1,7 @@
 ## UI-Router for Angular - Sample Application
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ui-router/sample-app-angular.svg)](https://greenkeeper.io/)
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
 
 http://ui-router.github.io/sample-app-angular/#/mymessages/inbox/5648b50cc586cac4aed6836f
