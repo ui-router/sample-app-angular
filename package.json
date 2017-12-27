@@ -23,7 +23,7 @@
     "@angular/platform-browser": "5.1.2",
     "@angular/platform-browser-dynamic": "5.1.2",
     "@angular/router": "5.1.2",
-    "@ngtools/webpack": "1.9.2",
+    "@ngtools/webpack": "1.9.3",
     "@uirouter/angular": "1.0.0-rc.2",
     "@uirouter/visualizer": "5.0.6",
     "bootstrap": "^3.3.7",
