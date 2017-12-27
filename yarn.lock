@@ -177,6 +177,19 @@
     source-map "^0.5.6"
     tree-kill "^1.0.0"
 
+"@ngtools/webpack@1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.9.3.tgz#353e27e6f21ab35467d17b67e3096dfc5d9bf80c"
+  dependencies:
+    chalk "~2.2.0"
+    enhanced-resolve "^3.1.0"
+    loader-utils "^1.0.2"
+    magic-string "^0.22.3"
+    semver "^5.3.0"
+    source-map "^0.5.6"
+    tree-kill "^1.0.0"
+    webpack-sources "^1.1.0"
+
 "@schematics/angular@~0.1.11":
   version "0.1.11"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.1.11.tgz#b5f15320bbb60969d66c76a8ef6545058ac81ece"
@@ -8154,6 +8167,13 @@ webpack-sources@^1.0.1:
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
+
+webpack-sources@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.1.0.tgz#a101ebae59d6507354d71d8013950a3a8b7a5a54"
+  dependencies:
+    source-list-map "^2.0.0"
+    source-map "~0.6.1"
 
 webpack-subresource-integrity@^1.0.1:
   version "1.0.1"
