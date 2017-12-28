@@ -23,7 +23,6 @@
     "@angular/platform-browser": "5.1.2",
     "@angular/platform-browser-dynamic": "5.1.2",
     "@angular/router": "5.1.2",
-    "@ngtools/webpack": "1.9.2",
     "@uirouter/angular": "1.0.0-rc.2",
     "@uirouter/visualizer": "5.0.6",
     "bootstrap": "^3.3.7",
@@ -34,7 +33,7 @@
     "zone.js": "0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.2",
+    "@angular/cli": "1.6.3",
     "@angular/compiler-cli": "5.1.2",
     "@types/jasmine": "2.8.3",
     "@types/node": "^8.5.2",
