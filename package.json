@@ -31,12 +31,12 @@
     "font-awesome": "^4.7.0",
     "rxjs": "5.5.6",
     "ts-helpers": "^1.1.1",
-    "zone.js": "0.8.18"
+    "zone.js": "0.8.19"
   },
   "devDependencies": {
     "@angular/cli": "1.6.2",
     "@angular/compiler-cli": "5.1.2",
-    "@types/jasmine": "2.8.2",
+    "@types/jasmine": "2.8.3",
     "@types/node": "^8.5.2",
     "@types/whatwg-fetch": "0.0.33",
     "browser-sync": "^2.21.0",
