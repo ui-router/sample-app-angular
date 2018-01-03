@@ -308,9 +308,9 @@
     rollup-plugin-uglify "^1.0.2"
     rollup-plugin-visualizer "^0.2.1"
 
-"@uirouter/visualizer@5.0.6":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@uirouter/visualizer/-/visualizer-5.0.6.tgz#bf892bebe2384b51ea9f91e616b5a3ad11fb6a1d"
+"@uirouter/visualizer@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/visualizer/-/visualizer-5.1.0.tgz#28c60aaa57d1a1a9658842874578404671657616"
   dependencies:
     d3-hierarchy "^1.1.5"
     d3-interpolate "^1.1.5"
