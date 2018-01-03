@@ -24,7 +24,7 @@
     "@angular/platform-browser-dynamic": "5.1.2",
     "@angular/router": "5.1.2",
     "@uirouter/angular": "1.0.0-rc.2",
-    "@uirouter/visualizer": "5.0.6",
+    "@uirouter/visualizer": "5.1.0",
     "bootstrap": "^3.3.7",
     "core-js": "2.5.3",
     "font-awesome": "^4.7.0",
