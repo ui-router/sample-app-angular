@@ -30,7 +30,7 @@
     "font-awesome": "^4.7.0",
     "rxjs": "5.5.6",
     "ts-helpers": "^1.1.1",
-    "zone.js": "0.8.19"
+    "zone.js": "0.8.20"
   },
   "devDependencies": {
     "@angular/cli": "1.6.3",
