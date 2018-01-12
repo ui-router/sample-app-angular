@@ -35,7 +35,7 @@
   "devDependencies": {
     "@angular/cli": "1.6.3",
     "@angular/compiler-cli": "5.1.2",
-    "@types/jasmine": "2.8.3",
+    "@types/jasmine": "2.8.4",
     "@types/node": "^8.5.2",
     "@types/whatwg-fetch": "0.0.33",
     "browser-sync": "^2.21.0",
