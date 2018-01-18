@@ -39,7 +39,7 @@
     "@types/node": "^8.5.2",
     "@types/whatwg-fetch": "0.0.33",
     "browser-sync": "^2.21.0",
-    "codelyzer": "~4.0.2",
+    "codelyzer": "~4.1.0",
     "cypress": "^1.4.0",
     "jasmine-core": "2.8.0",
     "jasmine-spec-reporter": "4.2.1",
