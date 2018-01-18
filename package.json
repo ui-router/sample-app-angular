@@ -41,7 +41,7 @@
     "browser-sync": "^2.21.0",
     "codelyzer": "~4.0.2",
     "cypress": "^1.4.0",
-    "jasmine-core": "2.8.0",
+    "jasmine-core": "2.9.0",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "2.0.0",
     "karma-chrome-launcher": "2.2.0",
