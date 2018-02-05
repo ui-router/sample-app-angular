@@ -40,7 +40,7 @@
     "@types/whatwg-fetch": "0.0.33",
     "browser-sync": "2.23.6",
     "codelyzer": "4.1.0",
-    "cypress": "1.4.1",
+    "cypress": "1.4.2",
     "jasmine-core": "2.9.1",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "2.0.0",
