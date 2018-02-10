@@ -5,7 +5,9 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
 
-http://ui-router.github.io/sample-app-angular/#/mymessages/inbox/5648b50cc586cac4aed6836f
+Live demo: http://ui-router.github.io/sample-app-angular/#/mymessages/inbox/5648b50cc586cac4aed6836f
+
+Edit this project in your browser: https://stackblitz.com/github/ui-router/sample-app-angular
 
 This sample app is intended to demonstrate a non-trivial ui-router application.
 
