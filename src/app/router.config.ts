@@ -9,6 +9,7 @@ export function routerConfigFn(router: UIRouter) {
   requiresAuthHook(transitionService);
   googleAnalyticsHook(transitionService);
 
+  router.urlService.deferIntercept();
   router.trace.enable(Category.TRANSITION);
   router.plugin(Visualizer);
 }
