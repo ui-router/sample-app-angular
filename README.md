@@ -1,5 +1,3 @@
-# https://github.com/ui-router/angular/issues/189
-
 ## UI-Router for Angular - Sample Application
 
 [![Travis badge](https://travis-ci.org/ui-router/sample-app-angular.svg?branch=master)](https://travis-ci.org/ui-router/sample-app-angular)
