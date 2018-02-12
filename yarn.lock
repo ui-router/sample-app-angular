@@ -265,16 +265,20 @@
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@types/whatwg-streams/-/whatwg-streams-0.0.3.tgz#4853d869f3e26d5adfd0d9407b6edce716d06bfe"
 
-"@uirouter/angular@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.0.tgz#031e0eff9dd84307238a106098cb73e22d120948"
+"@uirouter/angular@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.1.tgz#50e4f58832e2d5d310ca35ce1b9eed7aa6035811"
   dependencies:
-    "@uirouter/core" "5.0.16"
+    "@uirouter/core" "5.0.17"
     "@uirouter/rx" "0.4.5"
 
-"@uirouter/core@*", "@uirouter/core@5.0.16":
+"@uirouter/core@*":
   version "5.0.16"
   resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.16.tgz#c6f9e2041df1b6ad3bc28b089e55241a1cb4610f"
+
+"@uirouter/core@5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.17.tgz#c85d422b1e9a45df885be8b84f9b7f53233a7973"
 
 "@uirouter/rx@0.4.5":
   version "0.4.5"
@@ -6713,7 +6717,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@2.6.2, typescript@~2.6.2:
+typescript@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.1.tgz#bb3682c2c791ac90e7c6210b26478a8da085c359"
+
+typescript@~2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
