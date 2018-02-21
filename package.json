@@ -38,7 +38,7 @@
     "@types/whatwg-fetch": "0.0.33",
     "browser-sync": "2.23.6",
     "codelyzer": "4.1.0",
-    "cypress": "2.0.2",
+    "cypress": "2.0.3",
     "npm-run-all": "4.1.2",
     "shx": "0.2.2",
     "ts-node": "4.1.0",
