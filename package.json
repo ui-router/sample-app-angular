@@ -22,7 +22,7 @@
     "@angular/http": "5.2.5",
     "@angular/platform-browser": "5.2.5",
     "@angular/platform-browser-dynamic": "5.2.5",
-    "@angular/router": "5.2.5",
+    "@angular/router": "5.2.6",
     "@uirouter/angular": "1.0.1",
     "@uirouter/core": "*",
     "@uirouter/visualizer": "6.0.0",
