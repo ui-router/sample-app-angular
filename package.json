@@ -41,7 +41,6 @@
     "cypress": "2.1.0",
     "npm-run-all": "4.1.2",
     "shx": "0.2.2",
-    "ts-node": "5.0.1",
     "typescript": "~2.6.0",
     "wait-on": "2.1.0"
   }
