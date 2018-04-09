@@ -3,17 +3,13 @@
 # compiled output
 /dist
 /tmp
+.*
 
 # dependencies
 /node_modules
 
 # IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
 *.launch
-.settings/
 
 # IDE - VSCode
 .vscode/*
@@ -23,7 +19,6 @@
 !.vscode/extensions.json
 
 # misc
-/.sass-cache
 /connect.lock
 /coverage/*
 /libpeerconnection.log
@@ -36,5 +31,4 @@ testem.log
 /e2e/*.map
 
 #System Files
-.DS_Store
 Thumbs.db
