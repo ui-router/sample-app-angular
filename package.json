@@ -7,10 +7,9 @@
     "ng": "ng",
     "start": "ng serve --prod --sm",
     "build": "ng build --prod --sm",
-    "test": "run-s build e2e",
-    "e2e": "run-p -r browser-sync cypress",
-    "browser-sync": "browser-sync start --port 4000 --server dist --no-open",
-    "cypress": "wait-on tcp:4000 && cypress run",
+    "test": "npm run build && cypress-runner run",
+    "test:open": "npm run build && cypress-runner open",
+    "e2e": "npm run test",
     "gh-pages": "ng build --base-href=/sample-app-angular/ && shx rm -rf pages && shx mkdir pages && cd pages && git init && git remote add pages git@github.com:ui-router/sample-app-angular.git && git fetch pages && git checkout gh-pages && git rm -rf * && shx mv ../dist/* . && git add . && git commit -m 'Update gh-pages' . && git push && cd .. && shx rm -rf pages"
   },
   "private": true,
@@ -37,14 +36,11 @@
     "@angular/compiler-cli": "^5.2.8",
     "@types/jasmine": "^2.8.6",
     "@types/whatwg-fetch": "^0.0.33",
-    "browser-sync": "^2.23.6",
+    "@uirouter/cypress-runner": "^1.0.4",
     "codelyzer": "^4.2.1",
-    "cypress": "^2.1.0",
-    "npm-run-all": "^4.1.2",
     "rollup": "^0.57.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "shx": "^0.2.2",
-    "typescript": "~2.6.0",
-    "wait-on": "^2.1.0"
+    "typescript": "~2.6.0"
   }
 }
