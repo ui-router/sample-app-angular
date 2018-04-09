@@ -6,3 +6,7 @@ dependencies:
     related_pr_behavior: close
     github_labels:
     - dependencies
+  manifest_updates:
+    filters:
+    - name: "typescript"
+      versions: L.L.Y
