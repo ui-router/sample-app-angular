@@ -36,7 +36,7 @@
     "@types/jasmine": "^2.8.6",
     "@uirouter/cypress-runner": "^1.0.4",
     "codelyzer": "^4.2.1",
-    "rollup": "^0.57.1",
+    "rollup": "^0.58.1",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "shx": "^0.2.2",
