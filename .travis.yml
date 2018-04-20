@@ -1,26 +1,17 @@
 language: node_js
-node_js:
-- 8.9.1
-cache:
-  directories:
-  - "$HOME/.npm"
-  - node_modules
-before_script:
-- greenkeeper-lockfile-update
+node_js: 8.9.1
 before_install:
 - sh -e /etc/init.d/xvfb start
-- curl -o- -L https://yarnpkg.com/install.sh | bash
-- export PATH="$HOME/.yarn/bin:$PATH"
-- yarn global add greenkeeper-lockfile@1
-after_script: greenkeeper-lockfile-upload
+- export PATH=$HOME/.yarn/bin:$PATH
+- curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.5.1
 sudo: false
 git:
-  depth: 10
+  depth: 3
 notifications:
   slack:
-    on_success: change
+    on_success: never
     rooms:
       secure: swiAF3PhS+xOGAkp+FtoPPNKtK6dEeb0AdWjgeJi2DKAONOU/GvfXluJc1zyG0/B+emxYHmPnSgHLjTMOt98E2CT10FRoKw6zfMAz/Orxdq8GcRVli3Pp3aEyurqMx0naAENbSiE5KhKX2d4xklOuJ5WhNgYCN1AqTxtBFbV4JUJFQHATYUoCN078MKs58ytKVSCnmGPh3VtuFVxk7w0uKWRjXD4SyQTMyA0Wriq8DSs0cnN/PHt/8++pogbhyLs2YAA2wuBfeJixd2KkVv3IuGCGgH4xH1h6+pHkO6lSZrAr0p8i4CdyNIlztvJDlNGcNkcfXvvtI/NRmcEgMwKR/e55qgF/GuulOTwqQzJShvkMQIfHGuD89pLGwNTfTW9OQ828tEshXuDq6e52iKeAbgtefoTAOFHQkKDEr7zE4QpPFEwTCoFmijMc8rxx4hpe4blJjgCBjgdWr0FqyDASIiz04RnFNiV2jJSPE+s4aXW7B+2dn5yJYHKxk3y6d8+7bStGmjcOFcoVnzgySPk/KS22xUMKzyZnEUZLdJGO3dlV+PiNhdB/Lg+gwbBd6jPrJIP+x5onOiiRv9ZNSIfCy4LXlCI78cEN/T4DI2VDuTLdYuED2CCZFzzZDVqR9PDIVoBtjdemScd27LAPBOxXFfvCi5nSVpr8xQhSpkXZBg=
-env:
-  global:
-    secure: Soag+b0gKud20sPsthTq3A5QhD+2Chmvr+b+aw7SXJgWeVMuAamAM5OP+LR8Nsc/3KYKT2FtrsLMCeBqJNMfV3g08XC6Mk6E3MDnOwtbTobMjg3CTLlmlA3tDdtqNcl5KGJuHjfx//H3E2p+1X1Z+9ON1HK+WtLEqnwVn5UwNMqcpWk16+g2+hc4dumkVDhRiAf57Pum12tkFwM/4C+5PVUFBNNHUHtZYJUWoFst3wo5GHJHfimHPlcmpkvw84ZCc/Mu3X73MpBhU/eWAqXc3xRet5VDx8aQRk8lhoGn259f8hVacAA0MU42VjzHvFVOwk0EHrNwjNtzgsHJqJJdGTIiRGHBKawuUq7SIJxwLv3MhkMqOTWQ7yVzHvAUmqomUp8cxQMWnNy6h3ZbApNp7vmNnQhCTrKTJDU/9Y81/PAMD/ECd+ege5G6AbavKuI21jXZWWxOUTSnQ9SAxi9seoL9e7kZgFwp+TAINvVe3UvmHzi982xgjThoPz3zY6Sdg1fIDzUOBGpdnYHrDntNVMKRdnbkHaABDME2OyvfQkR0CcT9fVkQhALDI9fL0rbDGZ7OoVE2ceVzJILAMcaa3MqXhM9xmpGBXaZ5wBxiJCdG2UGd7BjOappVrxonAA0XalqWHkxn1elzQXJ/E0WDe2TeI5S7b9JrEmFKY+GeZMw=
+cache:
+  directories:
+  - node_modules
