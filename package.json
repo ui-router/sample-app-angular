@@ -34,7 +34,7 @@
     "@angular/cli": "^1.7.3",
     "@angular/compiler-cli": "^5.2.10",
     "@types/jasmine": "^2.8.6",
-    "@uirouter/cypress-runner": "^1.0.5",
+    "@uirouter/cypress-runner": "^1.0.6",
     "codelyzer": "^4.3.0",
     "rollup": "^0.58.2",
     "rollup-plugin-node-resolve": "^3.3.0",
