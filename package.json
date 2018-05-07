@@ -32,7 +32,7 @@
     "zone.js": "^0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "^1.7.3",
+    "@angular/cli": "^6.0.0",
     "@angular/compiler-cli": "^5.2.10",
     "@types/jasmine": "^2.8.7",
     "@uirouter/cypress-runner": "^1.0.7",
