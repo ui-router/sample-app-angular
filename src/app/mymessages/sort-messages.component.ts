@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, HostListener, OnDestroy } from '@angular/core';
 import { AppConfigService } from '../global/app-config.service';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 /**
  * A directive (for a table header) which changes the app's sort order

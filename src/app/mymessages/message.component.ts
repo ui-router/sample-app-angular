@@ -3,8 +3,7 @@ import { setProp } from '../util/util';
 import { DialogService } from '../global/dialog.service';
 import { MessagesDataService } from './messages-data.service';
 import { StateService } from '@uirouter/core';
-import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
+import { Subscription ,  Observable } from 'rxjs';
 import { Folder, Message } from './interface';
 
 /**

@@ -1,15 +1,15 @@
-import { ComposeComponent } from './compose.component';
-import { MessageListComponent } from './message-list.component';
-import { MessageComponent } from './message.component';
-import { MymessagesComponent } from './mymessages.component';
 import { Ng2StateDeclaration } from '@uirouter/angular';
 import { Transition } from '@uirouter/core';
-import { FoldersDataService } from './folders-data.service';
-import { MessagesDataService } from './messages-data.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { AppConfigService } from '../global/app-config.service';
-import { Observable } from 'rxjs/Observable';
+import { ComposeComponent } from './compose.component';
+import { FoldersDataService } from './folders-data.service';
 import { Folder, Message } from './interface';
-import 'rxjs/add/operator/map';
+import { MessageListComponent } from './message-list.component';
+import { MessageComponent } from './message.component';
+import { MessagesDataService } from './messages-data.service';
+import { MymessagesComponent } from './mymessages.component';
 
 export function getFolders(foldersService: FoldersDataService) {
   return foldersService.all();
@@ -45,9 +45,9 @@ export function getMessages(messagesService: MessagesDataService, folder: Folder
                             appConfig: AppConfigService): Promise<Observable<Message[]>> {
   const promise = messagesService.byFolder(folder);
 
-  return promise.then(messages => appConfig.sort$.map(sortOrder =>
+  return promise.then(messages => appConfig.sort$.pipe(map(sortOrder =>
     MessagesDataService.sortedMessages(messages, sortOrder)
-  ));
+  )));
 }
 
 /**
@@ -80,12 +80,14 @@ export function getMessage(messagesService: MessagesDataService, transition: Tra
   return messagesService.get(transition.params().messageId);
 }
 
-export function getProximalMessage(messages$, message) {
-  return messages$.map(messages => {
-    const curIdx = messages.indexOf(message);
-    const nextIdx = curIdx === messages.length ? curIdx - 1 : curIdx + 1;
-    return messages[nextIdx];
-  });
+export function getProximalMessage(messages$: Observable<Message[]>, message: Message) {
+  return messages$.pipe(
+    map((messages: Message[]) => {
+      const curIdx = messages.indexOf(message);
+      const nextIdx = curIdx === messages.length ? curIdx - 1 : curIdx + 1;
+      return messages[nextIdx];
+    })
+  );
 }
 
 /**
