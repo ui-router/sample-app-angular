@@ -276,7 +276,7 @@
     "@uirouter/core" "5.0.17"
     "@uirouter/rx" "0.4.5"
 
-"@uirouter/core@*", "@uirouter/core@5.0.17":
+"@uirouter/core@5.0.17":
   version "5.0.17"
   resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.17.tgz#c85d422b1e9a45df885be8b84f9b7f53233a7973"
 
