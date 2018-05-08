@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^5.2.10",
     "@angular/platform-browser-dynamic": "^5.2.10",
     "@angular/router": "^5.2.10",
-    "@uirouter/angular": "^1.0.1",
+    "@uirouter/angular": "^1.1.0",
     "@uirouter/visualizer": "^6.0.0",
     "core-js": "^2.5.3",
     "rxjs": "^6.1.0",
