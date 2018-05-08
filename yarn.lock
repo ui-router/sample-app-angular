@@ -269,16 +269,16 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
-"@uirouter/angular@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.0.1.tgz#50e4f58832e2d5d310ca35ce1b9eed7aa6035811"
+"@uirouter/angular@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-1.1.0.tgz#f33923726d673cb8717d0e09b3c1227e1b4892c0"
   dependencies:
-    "@uirouter/core" "5.0.17"
+    "@uirouter/core" "5.0.18"
     "@uirouter/rx" "0.4.5"
 
-"@uirouter/core@5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.17.tgz#c85d422b1e9a45df885be8b84f9b7f53233a7973"
+"@uirouter/core@5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.18.tgz#6dd85654ebc7e25eba2c1b32f069829db351abab"
 
 "@uirouter/cypress-runner@^1.0.7":
   version "1.0.7"
