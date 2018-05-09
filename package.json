@@ -21,7 +21,7 @@
     "@angular/http": "^5.2.10",
     "@angular/platform-browser": "^5.2.10",
     "@angular/platform-browser-dynamic": "^5.2.10",
-    "@angular/router": "^5.2.10",
+    "@angular/router": "^6.0.0",
     "@uirouter/angular": "^1.1.0",
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
