@@ -138,9 +138,9 @@
     reflect-metadata "^0.1.2"
     tsickle "^0.27.2"
 
-"@angular/compiler@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-6.0.0.tgz#9092a0f02f33dd1108276ab93cc48142e36a1e95"
+"@angular/compiler@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-6.0.1.tgz#01a803c307211446819be237af1a22e38d65ac2e"
   dependencies:
     tslib "^1.9.0"
 
