@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@angular/cli": "^6.0.1",
-    "@angular/compiler-cli": "^6.0.0",
+    "@angular/compiler-cli": "^6.0.1",
     "@types/jasmine": "^2.8.7",
     "@uirouter/cypress-runner": "^1.0.7",
     "codelyzer": "^4.3.0",
