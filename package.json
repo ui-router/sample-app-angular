@@ -29,7 +29,7 @@
     "@angular/forms": "^6.0.2",
     "@angular/http": "^6.0.2",
     "@angular/platform-browser": "^6.0.2",
-    "@angular/platform-browser-dynamic": "^6.0.2",
+    "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.2",
     "@uirouter/angular": "^2.0.0",
     "@uirouter/visualizer": "^6.0.0",
