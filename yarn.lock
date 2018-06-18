@@ -150,9 +150,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/forms@^6.0.4":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.0.4.tgz#abc5ea355b5261c49f111366f41a812aa9d3d1d3"
+"@angular/forms@^6.0.5":
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-6.0.5.tgz#d3ec7886d8b61a97b2c0b7501b304b449a2dcae6"
   dependencies:
     tslib "^1.9.0"
 
