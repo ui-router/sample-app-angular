@@ -1358,9 +1358,9 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codelyzer@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-4.4.1.tgz#168d4d383cdbad3b673ca44a9b033b1d9ca71db2"
+codelyzer@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-4.4.2.tgz#af11fed6ddf9362ed5b174495467fb7315306fb1"
   dependencies:
     app-root-path "^2.0.1"
     css-selector-tokenizer "^0.7.0"
