@@ -5333,9 +5333,9 @@ shelljs@^0.8.1:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-shx@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/shx/-/shx-0.3.0.tgz#f978c7a2c18cbf26ecdc1c44c22cc0238ff7c444"
+shx@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/shx/-/shx-0.3.1.tgz#876918dd6e7a1b531926afc0bdcb1565ab030ae4"
   dependencies:
     es6-object-assign "^1.0.3"
     minimist "^1.2.0"
