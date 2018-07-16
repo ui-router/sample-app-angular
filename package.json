@@ -34,7 +34,7 @@
     "@uirouter/angular": "^2.0.0",
     "@uirouter/visualizer": "^6.0.0",
     "core-js": "^2.5.7",
-    "rxjs": "^6.2.1",
+    "rxjs": "^6.2.2",
     "rxjs-compat": "^6.2.2",
     "ts-helpers": "^1.1.2",
     "zone.js": "^0.8.20"
