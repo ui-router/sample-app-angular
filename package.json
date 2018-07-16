@@ -24,7 +24,7 @@
     "@angular/router": "^5.2.10",
     "@uirouter/angular": "^1.1.0",
     "@angular/common": "^6.0.9",
-    "@angular/compiler": "^6.0.7",
+    "@angular/compiler": "^6.0.9",
     "@angular/core": "^6.0.9",
     "@angular/forms": "^6.0.9",
     "@angular/http": "^6.0.9",
