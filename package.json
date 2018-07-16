@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^5.2.10",
     "@angular/router": "^5.2.10",
     "@uirouter/angular": "^1.1.0",
-    "@angular/common": "^6.0.7",
+    "@angular/common": "^6.0.9",
     "@angular/compiler": "^6.0.7",
     "@angular/core": "^6.0.7",
     "@angular/forms": "^6.0.7",
