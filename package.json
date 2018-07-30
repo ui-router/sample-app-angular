@@ -19,7 +19,7 @@
     "@angular/core": "^6.1.0",
     "@angular/forms": "^6.1.0",
     "@angular/http": "^6.1.0",
-    "@angular/platform-browser": "^6.0.9",
+    "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@uirouter/angular": "^2.0.1",
