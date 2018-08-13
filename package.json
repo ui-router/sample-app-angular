@@ -20,7 +20,7 @@
     "@angular/forms": "^6.1.1",
     "@angular/http": "^6.1.0",
     "@angular/platform-browser": "^6.1.1",
-    "@angular/platform-browser-dynamic": "^6.1.0",
+    "@angular/platform-browser-dynamic": "^6.1.2",
     "@angular/router": "^6.1.1",
     "@uirouter/angular": "^2.0.1",
     "@uirouter/visualizer": "^6.0.2",
