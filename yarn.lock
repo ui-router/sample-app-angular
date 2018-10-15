@@ -162,9 +162,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser-dynamic@^6.1.9":
-  version "6.1.9"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-6.1.9.tgz#e00f1a4948b4c299b17c9561d83f7ea588117818"
+"@angular/platform-browser-dynamic@^6.1.10":
+  version "6.1.10"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-6.1.10.tgz#f7e192454e221cbe25ab0b8dc250bad4f6a2605b"
   dependencies:
     tslib "^1.9.0"
 
