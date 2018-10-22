@@ -14,7 +14,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^6.1.10",
+    "@angular/common": "^7.0.0",
     "@angular/compiler": "^6.1.10",
     "@angular/core": "^6.1.10",
     "@angular/forms": "^6.1.10",
