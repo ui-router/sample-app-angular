@@ -47,7 +47,7 @@ import { AppConfigService } from './global/app-config.service';
   styles: []
 })
 export class AppComponent implements OnInit {
-  @ViewChild('dialogdiv', {read: ViewContainerRef}) dialogdiv;
+  @ViewChild('dialogdiv', { read: ViewContainerRef, static: true }) dialogdiv;
 
   // data
   emailAddress;

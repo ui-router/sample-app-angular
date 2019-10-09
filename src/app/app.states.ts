@@ -89,21 +89,21 @@ export function returnTo ($transition$: Transition): any {
 export const contactsFutureState = {
   name: 'contacts.**',
   url: '/contacts',
-  loadChildren: './contacts/contacts.module#ContactsModule'
+  loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
 };
 
 // This future state is a placeholder for the lazy loaded Prefs states
 export const prefsFutureState = {
   name: 'prefs.**',
   url: '/prefs',
-  loadChildren: './prefs/prefs.module#PrefsModule'
+  loadChildren: () => import('./prefs/prefs.module').then(m => m.PrefsModule)
 };
 
 // This future state is a placeholder for the lazy loaded My Messages feature module
 export const mymessagesFutureState = {
   name: 'mymessages.**',
   url: '/mymessages',
-  loadChildren: './mymessages/mymessages.module#MymessagesModule'
+  loadChildren: () => import('./mymessages/mymessages.module').then(m => m.MymessagesModule)
 };
 
 export const APP_STATES = [
