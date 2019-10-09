@@ -164,12 +164,6 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/http@^6.1.10":
-  version "6.1.10"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.10.tgz#91239b27990b992cdb312056d3f11cc804bfeaf4"
-  dependencies:
-    tslib "^1.9.0"
-
 "@angular/platform-browser-dynamic@^6.1.10":
   version "6.1.10"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-6.1.10.tgz#f7e192454e221cbe25ab0b8dc250bad4f6a2605b"
