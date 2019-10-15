@@ -29,9 +29,6 @@ import { routerConfigFn } from './router.config';
     BrowserModule,
     FormsModule
   ],
-  providers: [
-    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }
-  ],
   bootstrap: [UIView]
 })
 export class AppModule { }
