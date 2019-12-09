@@ -23,7 +23,7 @@
     "@angular/router": "^8.2.9",
     "@uirouter/angular": "^5.0.0",
     "@uirouter/visualizer": "^6.0.2",
-    "core-js": "^2.5.7",
+    "core-js": "^3.4.8",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.3.3",
     "ts-helpers": "^1.1.2",
