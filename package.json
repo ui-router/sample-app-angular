@@ -24,7 +24,7 @@
     "@uirouter/angular": "^5.0.0",
     "@uirouter/visualizer": "^6.0.2",
     "core-js": "^2.5.7",
-    "rxjs": "^6.5.3",
+    "rxjs": "^6.5.4",
     "rxjs-compat": "^6.5.4",
     "ts-helpers": "^1.1.2",
     "tslib": "^1.10.0",
