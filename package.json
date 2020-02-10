@@ -36,7 +36,7 @@
     "@angular-devkit/build-angular": "~0.803.25",
     "@angular/cli": "^8.3.24",
     "@angular/compiler-cli": "^8.2.14",
-    "@types/jasmine": "^2.8.9",
+    "@types/jasmine": "^3.5.3",
     "@uirouter/cypress-runner": "^1.0.15",
     "codelyzer": "^5.2.1",
     "shx": "^0.3.2",
