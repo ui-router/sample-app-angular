@@ -38,7 +38,7 @@
     "@angular/compiler-cli": "^9.0.2",
     "@types/jasmine": "^2.8.9",
     "@uirouter/cypress-runner": "^1.1.0",
-    "codelyzer": "^5.1.2",
+    "codelyzer": "^5.2.2",
     "shx": "^0.3.2",
     "typescript": "3.7.5"
   }
