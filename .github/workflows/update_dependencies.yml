@@ -12,7 +12,7 @@ jobs:
     name: 'Update ${{ matrix.deptype }} (latest: ${{ matrix.latest }})'
     strategy:
       matrix:
-        excludes: ['typescript']
+        excludes: ['typescript,core-js']
         deptype: ['dependencies', 'devDependencies']
         latest: [true]
     steps:
