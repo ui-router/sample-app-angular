@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.7",
-    "@angular/cli": "^9.1.6",
+    "@angular/cli": "^9.1.7",
     "@angular/compiler-cli": "=9.1.4",
     "@types/jasmine": "^3.5.10",
     "@uirouter/cypress-runner": "^1.1.0",
