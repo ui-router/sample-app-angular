@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { routerConfigFn } from './router.config';
     UIRouterModule.forRoot({
       states: APP_STATES,
       useHash: true,
-      otherwise: { state: 'home' },
+      initial: { state: 'home' },
       config: routerConfigFn,
     }),
     GlobalModule,
