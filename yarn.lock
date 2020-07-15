@@ -1287,12 +1287,12 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@uirouter/angular@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-6.0.3.tgz#0fac516916db82fafe2bba90cdf13788b42e543f"
-  integrity sha512-EsRDtFD3lCTpAyo7XhaN8Rg9ot+LOkt98fcufmT2YsuKIupo/YbQ/peJG2JGK/814RdzgsmXzTdsvAe014d05g==
+"@uirouter/angular@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-7.0.0.tgz#6aec8dcc1c534a55a52277f270e48be6f2809695"
+  integrity sha512-86rOfLNjaXf6I/2t7658dKZyuGKzBRIwYEhB2J5YC/V49aD/bFxUyK7cy/C/95ti2o49XtmvTuYqzphUfLSlOA==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^1.10.0"
 
 "@uirouter/core@6.0.5":
   version "6.0.5"
