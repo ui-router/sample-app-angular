@@ -14,13 +14,13 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "=9.1.4",
-    "@angular/compiler": "=9.1.4",
-    "@angular/core": "=9.1.4",
-    "@angular/forms": "=9.1.4",
-    "@angular/platform-browser": "=9.1.4",
-    "@angular/platform-browser-dynamic": "=9.1.4",
-    "@uirouter/angular": "^6.0.3",
+    "@angular/common": "10.0.4",
+    "@angular/compiler": "10.0.4",
+    "@angular/core": "10.0.4",
+    "@angular/forms": "10.0.4",
+    "@angular/platform-browser": "10.0.4",
+    "@angular/platform-browser-dynamic": "10.0.4",
+    "@uirouter/angular": "^7.0.0",
     "@uirouter/core": "6.0.5",
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.0.0",
@@ -28,17 +28,17 @@
     "rxjs": "^6.6.0",
     "rxjs-compat": "^6.6.0",
     "ts-helpers": "^1.1.2",
-    "tslib": "^1.13.0",
+    "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.11",
-    "@angular/cli": "^9.1.9",
-    "@angular/compiler-cli": "=9.1.4",
+    "@angular-devkit/build-angular": "~0.1000.2",
+    "@angular/cli": "^10.0.2",
+    "@angular/compiler-cli": "10.0.4",
     "@types/jasmine": "^3.5.11",
     "@uirouter/cypress-runner": "^1.1.0",
-    "codelyzer": "^5.2.2",
+    "codelyzer": "^6.0.0",
     "shx": "^0.3.2",
-    "typescript": "~3.8.3"
+    "typescript": "~3.9.6"
   }
 }
