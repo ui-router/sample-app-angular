@@ -1523,10 +1523,10 @@
   dependencies:
     tslib "^1.10.0"
 
-"@uirouter/core@6.0.5":
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.5.tgz#60f13fd530fc75daa283e2bece944516559d066b"
-  integrity sha512-WN2HyELsxvqLaCMYCWojGW/QLRBgFBfwyERp5jC3Vn1njo/FLI5hplVqWMu6LIGp6Hpz3pbdtSaiFb1iY7iTVw==
+"@uirouter/core@6.0.6":
+  version "6.0.6"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.6.tgz#4bea0ca88790a939d8e84ba05a31b96f50d9abe8"
+  integrity sha512-+i1iNaPQRp1JoEnxi4EsTX30bSvkWtPEenENWdvdIzX615Q3WCWwnbW9DtrwX9gSD5qmWEaQEtGMU0uF3qJ+1g==
 
 "@uirouter/cypress-runner@^1.1.0":
   version "1.1.0"
@@ -3131,10 +3131,10 @@ core-js@3.6.4:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
   integrity sha512-4paDGScNgZP2IXXilaffL9X7968RuvwlkK3xWtZRVqgd8SYNiVKRJvkFd1aqqEuPfN7E68ZHEp9hDj6lHj4Hyw==
 
-core-js@^2.5.7:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
-  integrity sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==
+core-js@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
