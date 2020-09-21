@@ -23,7 +23,7 @@
     "@uirouter/angular": "^7.0.0",
     "@uirouter/core": "6.0.5",
     "@uirouter/rx": "0.6.5",
-    "@uirouter/visualizer": "^7.0.0",
+    "@uirouter/visualizer": "^7.2.1",
     "core-js": "^2.5.7",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
