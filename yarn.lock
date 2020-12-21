@@ -1628,17 +1628,17 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@uirouter/angular@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-7.0.0.tgz#6aec8dcc1c534a55a52277f270e48be6f2809695"
-  integrity sha512-86rOfLNjaXf6I/2t7658dKZyuGKzBRIwYEhB2J5YC/V49aD/bFxUyK7cy/C/95ti2o49XtmvTuYqzphUfLSlOA==
+"@uirouter/angular@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-8.0.0.tgz#57588c3994e35a995643fa629deb95a524508c82"
+  integrity sha512-ti7U7AUrdxwcL8BKJAYG1rOMjOe3dvZRGGzf3vEgjrE/Hw8AimR2OjMOYJwZH6IAcuwXCT5lolwQY8TJU40mBA==
   dependencies:
-    tslib "^1.10.0"
+    tslib "^2.0.0"
 
-"@uirouter/core@6.0.5":
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.5.tgz#60f13fd530fc75daa283e2bece944516559d066b"
-  integrity sha512-WN2HyELsxvqLaCMYCWojGW/QLRBgFBfwyERp5jC3Vn1njo/FLI5hplVqWMu6LIGp6Hpz3pbdtSaiFb1iY7iTVw==
+"@uirouter/core@6.0.7":
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.7.tgz#a66743dceb13a56d8908474ff891d63e5d5a2b01"
+  integrity sha512-KUTJxL+6q0PiBnFx4/Z+Hsyg0pSGiaW5yZQeJmUxknecjpTbnXkLU8H2EqRn9N2B+qDRa7Jg8RcgeNDPY72O1w==
 
 "@uirouter/cypress-runner@^1.1.0":
   version "1.1.0"
