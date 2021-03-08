@@ -20,7 +20,7 @@
     "@angular/forms": "11.0.5",
     "@angular/platform-browser": "11.0.5",
     "@angular/platform-browser-dynamic": "11.0.5",
-    "@uirouter/angular": "^8.0.0",
+    "@uirouter/angular": "^8.0.1",
     "@uirouter/core": "6.0.7",
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.2.1",
