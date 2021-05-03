@@ -1463,10 +1463,10 @@
   resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-5.1.0.tgz#551a4589b6ee2cc9c1dff08056128aec29b94880"
   integrity sha512-iYCgjm1dGPRuo12+BStjd1HiVQqhlRhWDOQigNxn023HcjnhsiFz9pc6CzJj4HwDCSQca9bxTL4PxJDbkdm3PA==
 
-"@types/jasmine@~3.6.9":
-  version "3.6.9"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.6.9.tgz#8785870f87839b7d91b45d7b226380f28dee5d9f"
-  integrity sha512-B53NIwMj/AO0O+xfSWLYmKB0Mo6TYxfv2Mk8/c1T2w/e38t55iaPR6p7pHXTTtqfTmevPK3i8T1YweYFTZlxDw==
+"@types/jasmine@~3.6.10":
+  version "3.6.10"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.6.10.tgz#c49d5660bda6e935782e5c83deb1d3b6efb3fac6"
+  integrity sha512-yfCl7JGtIc5LjScFpeIGBBNhJFkJdAAcsAnAd9ZRHwzh+sR2zkt257BKkTCF5VpJ8wMPnzzZ8QatRdXM8tqpKA==
 
 "@types/json-schema@^7.0.4":
   version "7.0.5"
