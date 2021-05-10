@@ -24,7 +24,7 @@
     "@uirouter/core": "6.0.7",
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.2.1",
-    "core-js": "^2.5.7",
+    "core-js": "^3.12.1",
     "rxjs": "^6.6.7",
     "rxjs-compat": "^6.6.7",
     "ts-helpers": "^1.1.2",
