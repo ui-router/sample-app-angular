@@ -40,7 +40,7 @@
     "@uirouter/cypress-runner": "^1.1.0",
     "codelyzer": "^6.0.2",
     "fibers": "5.0.0",
-    "html-webpack-plugin": "4.3.0",
+    "html-webpack-plugin": "5.3.1",
     "node-sass": "4.14.1",
     "shx": "^0.3.3",
     "tslint": "6.1.2",
