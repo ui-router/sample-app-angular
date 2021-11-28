@@ -5,8 +5,8 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --prod --source-map",
-    "build": "ng build --prod --source-map",
+    "start": "ng serve --configuration production --source-map",
+    "build": "ng build --configuration production --source-map",
     "test": "npm run build && cypress-runner run",
     "test:open": "npm run build && cypress-runner open",
     "e2e": "npm run test",
@@ -14,12 +14,12 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "11.0.5",
-    "@angular/compiler": "11.0.5",
-    "@angular/core": "11.0.5",
-    "@angular/forms": "11.0.5",
-    "@angular/platform-browser": "11.0.5",
-    "@angular/platform-browser-dynamic": "11.0.5",
+    "@angular/common": "13.0.2",
+    "@angular/compiler": "13.0.2",
+    "@angular/core": "13.0.2",
+    "@angular/forms": "13.0.2",
+    "@angular/platform-browser": "13.0.2",
+    "@angular/platform-browser-dynamic": "13.0.2",
     "@uirouter/angular": "^8.0.1",
     "@uirouter/core": "6.0.7",
     "@uirouter/rx": "0.6.5",
@@ -29,20 +29,19 @@
     "rxjs-compat": "^6.6.7",
     "ts-helpers": "^1.1.2",
     "tslib": "^2.3.0",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1100.7",
-    "@angular/animations": "11.0.5",
-    "@angular/cli": "^11.2.12",
-    "@angular/compiler-cli": "11.0.5",
+    "@angular-devkit/build-angular": "^13",
+    "@angular/animations": "13.0.2",
+    "@angular/cli": "^13.0.3",
+    "@angular/compiler-cli": "13.0.2",
     "@types/jasmine": "~3.6.10",
     "@uirouter/cypress-runner": "^1.1.0",
-    "codelyzer": "^6.0.2",
     "fibers": "5.0.0",
     "html-webpack-plugin": "4.3.0",
     "shx": "^0.3.3",
     "tslint": "6.1.2",
-    "typescript": "~4.0.8"
+    "typescript": "~4.4.4"
   }
 }
