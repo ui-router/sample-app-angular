@@ -32,12 +32,12 @@ export class PrefsComponent {
   /** Clear out the session storage */
   reset() {
     sessionStorage.clear();
-    document.location.reload(true);
+    document.location.reload();
   }
 
   /** After saving preferences to session storage, reload the entire application */
   savePrefs() {
     Object.assign(this.appConfig, { restDelay: this.prefs.restDelay }).save();
-    document.location.reload(true);
+    document.location.reload();
   }
 }
