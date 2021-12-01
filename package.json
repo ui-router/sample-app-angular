@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
+  "checkPeerDependencies": {
+    "ignore": ["ajv", "postcss"]
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --configuration production --source-map",
