@@ -1720,12 +1720,12 @@
   dependencies:
     "@types/node" "*"
 
-"@uirouter/angular@^9.0.1":
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-9.0.1.tgz#f0442639af0198d410f2de5c02d44e9c426f7233"
-  integrity sha512-JBxL7oU3n4KrG+84142IY7czUVKKqUDffhd1CEoUl4IC60CfCyiG5AUZN59fTqeHEiEwc8e3oe7OGG/Q51asWA==
+"@uirouter/angular@^9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-9.1.0.tgz#9c2be071c67573acda57c2d57cff6a962e693f94"
+  integrity sha512-YB3VM4tsdCtDTpXHWg99+uXJ135ySAZRy+oczH7vqJTRYIwxJ1DKA3Sc5ROnIHw4bhyCs0zC/yn+3zL0KwJtkQ==
   dependencies:
-    tslib "^2.2.0"
+    tslib "^2.3.0"
 
 "@uirouter/core@6.0.8":
   version "6.0.8"
@@ -7423,7 +7423,7 @@ ts-helpers@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ts-helpers/-/ts-helpers-1.1.2.tgz#fc69be9f1f3baed01fb1a0ef8d4cfe748814d835"
 
-tslib@2.3.1, tslib@^2.0.3, tslib@^2.2.0, tslib@^2.3.1:
+tslib@2.3.1, tslib@^2.0.3, tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==

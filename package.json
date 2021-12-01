@@ -4,7 +4,10 @@
   "license": "MIT",
   "angular-cli": {},
   "checkPeerDependencies": {
-    "ignore": ["ajv", "postcss"]
+    "ignore": [
+      "ajv",
+      "postcss"
+    ]
   },
   "scripts": {
     "ng": "ng",
@@ -23,7 +26,7 @@
     "@angular/forms": "13.0.2",
     "@angular/platform-browser": "13.0.2",
     "@angular/platform-browser-dynamic": "13.0.2",
-    "@uirouter/angular": "^9.0.1",
+    "@uirouter/angular": "^9.1.0",
     "@uirouter/core": "6.0.8",
     "@uirouter/rx": "1.0.0",
     "@uirouter/visualizer": "^7.2.1",
