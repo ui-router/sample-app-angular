@@ -6,15 +6,14 @@ import { DialogComponent } from './dialog.component';
 import { DialogService } from './dialog.service';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  providers: [
-    AppConfigService,
-    AuthService,
-    DialogService,
-  ],
-  declarations: [DialogComponent],
-  entryComponents: [DialogComponent],
+    imports: [
+        CommonModule
+    ],
+    providers: [
+        AppConfigService,
+        AuthService,
+        DialogService,
+    ],
+    declarations: [DialogComponent]
 })
 export class GlobalModule { }
