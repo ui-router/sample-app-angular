@@ -4,17 +4,21 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "mapRoot": "./",
     "module": "es2020",
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
-    "target": "es2020",
+    "target": "ES2022",
     "skipLibCheck": true,
     "typeRoots": [
       "../node_modules/@types"
-    ]
+    ],
+    "useDefineForClassFields": false
   },
   "files": [
     "main.ts",
