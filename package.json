@@ -26,7 +26,7 @@
     "@angular/forms": "^17.0.9",
     "@angular/platform-browser": "^17.0.9",
     "@angular/platform-browser-dynamic": "^17.0.9",
-    "@uirouter/angular": "^11.0.0",
+    "@uirouter/angular": "^13.0.0",
     "@uirouter/core": "6.0.8",
     "@uirouter/rx": "1.0.0",
     "@uirouter/visualizer": "^7.2.1",
@@ -38,9 +38,9 @@
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.0",
-    "@angular/animations": "^17.0.9",
-    "@angular/cli": "^16.0.0",
+    "@angular-devkit/build-angular": "^17.0.0",
+    "@angular/animations": "^17.0.10",
+    "@angular/cli": "^17.0.10",
     "@angular/compiler-cli": "^17.0.9",
     "@types/jasmine": "~3.10.2",
     "@uirouter/cypress-runner": "^3.0.0",
