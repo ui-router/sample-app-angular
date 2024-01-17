@@ -11,8 +11,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration production --source-map",
-    "build": "ng build --configuration production --source-map",
+    "start": "ng serve --configuration production",
+    "build": "ng build --configuration production",
     "test": "npm run build && cypress-runner run",
     "test:open": "npm run build && cypress-runner open",
     "e2e": "npm run test",
