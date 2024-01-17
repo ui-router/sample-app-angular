@@ -6,7 +6,8 @@
   "checkPeerDependencies": {
     "ignore": [
       "ajv",
-      "postcss"
+      "postcss",
+      "terser"
     ]
   },
   "scripts": {
