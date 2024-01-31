@@ -6,13 +6,14 @@
   "checkPeerDependencies": {
     "ignore": [
       "ajv",
-      "postcss"
+      "postcss",
+      "terser"
     ]
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration production --source-map",
-    "build": "ng build --configuration production --source-map",
+    "start": "ng serve --configuration production",
+    "build": "ng build --configuration production",
     "test": "npm run build && cypress-runner run",
     "test:open": "npm run build && cypress-runner open",
     "e2e": "npm run test",
@@ -20,13 +21,13 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^16.0.0",
-    "@angular/compiler": "^16.0.0",
-    "@angular/core": "^16.0.0",
-    "@angular/forms": "^16.0.0",
-    "@angular/platform-browser": "^16.0.0",
-    "@angular/platform-browser-dynamic": "^16.0.0",
-    "@uirouter/angular": "^11.0.0",
+    "@angular/common": "^17.0.9",
+    "@angular/compiler": "^17.0.9",
+    "@angular/core": "^17.0.9",
+    "@angular/forms": "^17.0.9",
+    "@angular/platform-browser": "^17.0.9",
+    "@angular/platform-browser-dynamic": "^17.0.9",
+    "@uirouter/angular": "^12.0.0",
     "@uirouter/core": "6.0.8",
     "@uirouter/rx": "1.0.0",
     "@uirouter/visualizer": "^7.2.1",
@@ -35,19 +36,18 @@
     "rxjs-compat": "^6.6.7",
     "ts-helpers": "^1.1.2",
     "tslib": "^2.3.1",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.0",
-    "@angular/animations": "^16.0.0",
-    "@angular/cli": "^16.0.0",
-    "@angular/compiler-cli": "^16.0.0",
+    "@angular-devkit/build-angular": "^17.0.0",
+    "@angular/animations": "^17.0.9",
+    "@angular/cli": "^17.0.10",
+    "@angular/compiler-cli": "^17.0.9",
     "@types/jasmine": "~3.10.2",
     "@uirouter/cypress-runner": "^3.0.0",
-    "fibers": "5.0.0",
     "html-webpack-plugin": "5.5.0",
     "shx": "^0.3.3",
     "tslint": "6.1.3",
-    "typescript": "~4.9.5"
+    "typescript": "~5.2.2"
   }
 }
