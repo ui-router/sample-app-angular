@@ -2177,17 +2177,17 @@
   dependencies:
     "@types/node" "*"
 
-"@uirouter/angular@^13.0.0":
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-13.0.0.tgz#cc32208e65e5d96c074f699e72615c3b4f03256b"
-  integrity sha512-T2aizSXzW+7eiXUmc0LiLH+I8ZBJvDr7OQmm/5WCcxVL2NfuIse7B1kpvfdh9PmBAqw8AY7S0NhrJgABfFJUnw==
+"@uirouter/angular@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-14.0.0.tgz#d555c735f58c78c8b653f3de163108494aef3216"
+  integrity sha512-SSngVeIaL4pOXJyuX9dAMrvaGyL7dv/dQxg6ArjyCk1013QowxIOS2XCgSCQX7k1nyDgK0wPdNY1lXb8XZ/qRg==
   dependencies:
     tslib "^2.3.0"
 
-"@uirouter/core@6.0.8":
-  version "6.0.8"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.8.tgz#a1e919a4743be729751aafc4ce353d0dc0ffd26c"
-  integrity sha512-Gc/BAW47i4L54p8dqYCJJZuv2s3tqlXQ0fvl6Zp2xrblELPVfxmjnc0eurx3XwfQdaqm3T6uls6tQKkof/4QMw==
+"@uirouter/core@6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.1.0.tgz#ca90ae476c85805e7d70add461e91738ae383bd5"
+  integrity sha512-WFYh5NPAqRX4L2qlI4k62tgR6pxoqOBSW1CM1uBWCau4mAmgasYd5etJ9RoSJrSnCpCQ2km2Jltf0n5ql684MQ==
 
 "@uirouter/cypress-runner@^3.0.0":
   version "3.0.0"
