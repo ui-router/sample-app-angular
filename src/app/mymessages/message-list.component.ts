@@ -6,13 +6,14 @@ import { Message } from './interface';
  * This component renders a list of messages using the `messageTable` component
  */
 @Component({
-  selector: 'app-message-list',
-  template: `
+    selector: 'app-message-list',
+    template: `
     <div class="messages">
       <app-message-table [columns]="folder.columns" [messages]="messages$ | async"></app-message-table>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class MessageListComponent {
   @Input() folder;

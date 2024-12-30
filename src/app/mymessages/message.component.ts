@@ -14,8 +14,8 @@ import { Folder, Message } from './interface';
  * For instance, a "draft" message can be edited, but can't be replied to.
  */
 @Component({
-  selector: 'app-message',
-  template: `
+    selector: 'app-message',
+    template: `
     <div class="message">
     
       <div class="header">
@@ -50,7 +50,8 @@ import { Folder, Message } from './interface';
       <div class="body" [innerHTML]="message.body | formatMessage"></div>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class MessageComponent implements OnInit {
   @Input() folder: Folder;

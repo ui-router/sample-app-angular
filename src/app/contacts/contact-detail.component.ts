@@ -4,8 +4,8 @@ import { Component, Input } from '@angular/core';
  * This component renders a read only view of the details for a single contact.
  */
 @Component({
-  selector: 'app-contact-detail',
-  template: `
+    selector: 'app-contact-detail',
+    template: `
   <div class="flex-h">
     <div class="details">
       <h3>{{contact.name.first}} {{contact.name.last}}</h3>
@@ -25,9 +25,9 @@ import { Component, Input } from '@angular/core';
       <img [src]="contact.picture"/>
     </div>
   </div>
-`
-  ,
-  styles: []
+`,
+    styles: [],
+    standalone: false
 })
 export class ContactDetailComponent {
   @Input() contact;

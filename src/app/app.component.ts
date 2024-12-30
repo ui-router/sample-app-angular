@@ -12,8 +12,8 @@ import { AppConfigService } from './global/app-config.service';
  * It has a `ui-view` viewport for nested states to fill in.
  */
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <div #dialogdiv></div>
     <div class="navheader">
       <ul *ngIf="isAuthenticated" class="nav nav-tabs">
@@ -42,9 +42,9 @@ import { AppConfigService } from './global/app-config.service';
     </div>
 
     <ui-view></ui-view>
-`
-  ,
-  styles: []
+`,
+    styles: [],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   @ViewChild('dialogdiv', { read: ViewContainerRef, static: true }) dialogdiv;

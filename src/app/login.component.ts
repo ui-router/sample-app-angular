@@ -10,8 +10,8 @@ import { AppConfigService } from './global/app-config.service';
  * It shows errors if the authentication failed for any reason.
  */
 @Component({
-  selector: 'app-login',
-  template: `
+    selector: 'app-login',
+    template: `
     <div class="container">
       <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <h3>Log In</h3>
@@ -53,7 +53,8 @@ import { AppConfigService } from './global/app-config.service';
       </div>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class LoginComponent {
   @Input() returnTo: TargetState;

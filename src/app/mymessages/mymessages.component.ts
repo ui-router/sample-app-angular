@@ -8,8 +8,8 @@ import { Component, Input } from '@angular/core';
  * - messagecontent: filled with the contents of a single message.
  */
 @Component({
-  selector: 'app-mymessages',
-  template: `
+    selector: 'app-mymessages',
+    template: `
     <div class="my-messages">
     
       <!-- Show message folders -->
@@ -23,7 +23,8 @@ import { Component, Input } from '@angular/core';
     <!-- A named ui-view for a message's contents.  The 'mymessages.messagelist.message' grandchild state plugs into this ui-view -->
     <ui-view name="messagecontent"></ui-view>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class MymessagesComponent {
   @Input() folders: any[];
