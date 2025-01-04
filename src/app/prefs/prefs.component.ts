@@ -5,8 +5,8 @@ import { AppConfigService } from '../global/app-config.service';
  * A component which shows and updates app preferences
  */
 @Component({
-  selector: 'app-prefs',
-  template: `
+    selector: 'app-prefs',
+    template: `
     <div>
       <button class="btn btn-primary" (click)="reset()"><i class="fa fa-recycle"></i> <span>Reset All Data</span></button>
     </div>
@@ -17,7 +17,8 @@ import { AppConfigService } from '../global/app-config.service';
       <button class="btn btn-primary" (click)="savePrefs()">Save</button>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class PrefsComponent {
   // data

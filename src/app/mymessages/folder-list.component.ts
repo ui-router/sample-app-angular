@@ -4,8 +4,8 @@ import { Component, Input } from '@angular/core';
  * Renders a list of folders
  */
 @Component({
-  selector: 'app-folder-list',
-  template: `
+    selector: 'app-folder-list',
+    template: `
     <!-- Renders a list of folders -->
     <div class="folderlist">
       <ul class="selectlist list-unstyled">
@@ -20,7 +20,8 @@ import { Component, Input } from '@angular/core';
       </ul>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class FolderListComponent {
   @Input() folders: any[];

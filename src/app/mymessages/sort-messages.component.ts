@@ -6,15 +6,16 @@ import { Subscription } from 'rxjs';
  * A directive (for a table header) which changes the app's sort order
  */
 @Component({
-  selector: '[app-sort-messages]',
-  template: `
+    selector: '[app-sort-messages]',
+    template: `
     <i style='padding-left: 0.25em' 
       class='fa' 
       [class.fa-sort-asc]="asc" 
       [class.fa-sort-desc]="desc"
     ></i>{{ label }}
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class SortMessagesComponent implements OnInit, OnDestroy {
   @Input('prop') prop: string;

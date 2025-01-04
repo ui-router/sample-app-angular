@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
  * Another button edits the contact by linking to `contacts.contact.edit` state.
  */
 @Component({
-  selector: 'app-contact',
-  template: `
+    selector: 'app-contact',
+    template: `
     <div class="contact">
       <app-contact-detail [contact]="contact"></app-contact-detail>
     
@@ -25,7 +25,8 @@ import { Component, Input } from '@angular/core';
       <ui-view></ui-view>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class ContactComponent {
   @Input() contact;

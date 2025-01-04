@@ -2,8 +2,8 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { wait } from '../util/util';
 
 @Component({
-  selector: 'app-dialog',
-  template: `
+    selector: 'app-dialog',
+    template: `
       <div class="backdrop" [class.active]="visible"></div>
       <div class='wrapper'>
         <div class="content">
@@ -17,7 +17,8 @@ import { wait } from '../util/util';
         </div>
       </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class DialogComponent implements OnInit {
   @HostBinding('class.dialog') dialog = true;

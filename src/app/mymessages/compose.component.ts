@@ -14,8 +14,8 @@ import { copy } from '../util/util';
  * A Send button sends the message
  */
 @Component({
-  selector: 'app-compose',
-  template: `
+    selector: 'app-compose',
+    template: `
     <div class="compose">
       <div class="header">
         <div class="flex-h"> <label>Recipient</label> <input type="text" id="to" name="to" [(ngModel)]="message.to"> </div>
@@ -34,7 +34,8 @@ import { copy } from '../util/util';
       </div>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class ComposeComponent implements OnInit {
   // data

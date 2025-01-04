@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-welcome',
-  template: `
+    selector: 'app-welcome',
+    template: `
     <div class="container-fluid">
     
       <h3>UI-Router Sample App</h3>
@@ -33,7 +33,8 @@ import { Component, OnInit } from '@angular/core';
       </ul>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class WelcomeComponent implements OnInit {
   constructor() { }

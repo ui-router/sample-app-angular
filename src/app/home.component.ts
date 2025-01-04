@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 // This is a home component for authenticated users.
 // It shows giant buttons which activate their respective submodules: Messages, Contacts, Preferences
 @Component({
-  selector: 'app-home',
-  template: `
+    selector: 'app-home',
+    template: `
     <div class="home buttons">
       <button uiSref="mymessages" class="btn btn-primary">
         <h1><i class="fa fa-envelope"></i></h1>
@@ -21,7 +21,8 @@ import { Component, OnInit } from '@angular/core';
       </button>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class HomeComponent {
   constructor() { }

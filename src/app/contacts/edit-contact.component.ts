@@ -28,8 +28,8 @@ import { copy } from '../util/util';
  *   the `reload: true` option re-fetches the contacts resolve data from the server
  */
 @Component({
-  selector: 'app-edit-contact',
-  template: `
+    selector: 'app-edit-contact',
+    template: `
     <div class="contact">
       <div class="details">
         <div><label>First</label><input type="text" [(ngModel)]="contact.name.first"></div>
@@ -55,7 +55,8 @@ import { copy } from '../util/util';
       </div>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class EditContactComponent implements OnInit {
   @Input() pristineContact;

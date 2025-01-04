@@ -10,8 +10,8 @@ import { Component, Input } from '@angular/core';
  * Shows/hides specific columns based on the `columns` input binding.
  */
 @Component({
-  selector: 'app-message-table',
-  template: `
+    selector: 'app-message-table',
+    template: `
     <table>
       <thead>
         <tr>
@@ -36,7 +36,8 @@ import { Component, Input } from '@angular/core';
   
     </table>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class MessageTableComponent {
   @Input() columns: any[];

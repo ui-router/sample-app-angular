@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
  * On the right is the ui-view viewport where contact details appear.
  */
 @Component({
-  selector: 'app-contacts',
-  template: `
+    selector: 'app-contacts',
+    template: `
     <div class="my-contacts flex-h">
     
       <app-contact-list [contacts]="contacts" class="flex nogrow"></app-contact-list>
@@ -19,7 +19,8 @@ import { Component, Input } from '@angular/core';
       </ui-view>
     </div>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class ContactsComponent {
   @Input() contacts;

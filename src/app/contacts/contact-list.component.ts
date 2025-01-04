@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
  * Each list item is a clickable link to the `contacts.contact` details substate
  */
 @Component({
-  selector: 'app-contact-list',
-  template: `
+    selector: 'app-contact-list',
+    template: `
   <ul class="selectlist list-unstyled">
     <li>
       <!-- This link is a relative ui-sref to the contacts.new state. -->
@@ -31,7 +31,8 @@ import { Component, Input } from '@angular/core';
     </li>
   </ul>
 `,
-  styles: []
+    styles: [],
+    standalone: false
 })
 export class ContactListComponent {
   @Input() contacts;
