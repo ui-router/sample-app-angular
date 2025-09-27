@@ -2807,10 +2807,10 @@
   dependencies:
     "@types/node" "*"
 
-"@uirouter/angular@^16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-16.1.0.tgz#bb080556b57a34cdafdfbfbb8881374f85098c17"
-  integrity sha512-XrGg2Uqd/ECrzmXSqlWe4G7b+854MMIVrzyZGMtzg0RpnIrCz4egZ0QyGnzsNxqd6CD5PHg5imZlPwdQi50bzQ==
+"@uirouter/angular@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@uirouter/angular/-/angular-17.0.0.tgz#b5b658059158afdf26de8ea4c850b055038c8a0a"
+  integrity sha512-wXlpLyld+pWd3Nhb2Vts5p0/fBdpQABaMp4nHezJBjIpvZztlSS22kJG14UNsfNEr7lr8r3y5YPjrW9/uIYCyw==
   dependencies:
     tslib "^2.3.0"
 
