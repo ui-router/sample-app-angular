@@ -6,8 +6,8 @@
     "ng": "ng",
     "start": "ng serve --configuration production",
     "build": "ng build --configuration production",
-    "test": "npm run build && cypress-runner run --path=dist/browser",
-    "test:open": "npm run build && cypress-runner open --path=dist/browser",
+    "test": "playwright install chromium && npm run build && playwright test",
+    "test:ui": "npm run build && playwright test --ui",
     "e2e": "npm run test",
     "gh-pages": "ng build --base-href=/sample-app-angular/ && shx rm -rf pages && shx mkdir pages && cd pages && git init && git remote add pages git@github.com:ui-router/sample-app-angular.git && git fetch pages && git checkout gh-pages && git rm -rf * && shx mv ../dist/browser/* . && git add . && git commit -m 'Update gh-pages' . && git push && cd .. && shx rm -rf pages"
   },
@@ -31,8 +31,9 @@
     "@angular/animations": "^21.0.6",
     "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.6",
+    "@playwright/test": "^1.57.0",
     "@types/jasmine": "~5.1.0",
-    "@uirouter/cypress-runner": "^3.0.0",
+    "serve": "^14.2.5",
     "typescript": "~5.9.3"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
