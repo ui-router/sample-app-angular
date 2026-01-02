@@ -16,33 +16,31 @@ import { AppConfigService } from './global/app-config.service';
     template: `
     <div #dialogdiv></div>
     <div class="navheader">
-      <ul *ngIf="isAuthenticated" class="nav nav-tabs">
-
-        <li uiSrefActive="active"> <a uiSref="mymessages" role="button"> Messages </a> </li>
-        <li uiSrefActive="active"> <a uiSref="contacts" role="button"> Contacts </a> </li>
-        <li uiSrefActive="active"> <a uiSref="prefs" role="button"> Preferences </a> </li>
-
-        <li class="navbar-right">
-          <button class="btn btn-primary fa fa-home" uiSref="home"></button>
-          <button style="margin-right: 15px;" class="btn btn-primary" uiSref="mymessages.compose">
-            <i class="fa fa-envelope"></i> New Message
-          </button>
-        </li>
-
-        <li class="navbar-text navbar-right logged-in-user" style="margin: 0.5em 1.5em;">
-          <div>
-            {{emailAddress}} <i class="fa fa-chevron-down"></i>
-            <div class="hoverdrop">
-              <button class="btn btn-primary" (click)="logout()">Log Out</button>
+      @if (isAuthenticated) {
+        <ul class="nav nav-tabs">
+          <li uiSrefActive="active"> <a uiSref="mymessages" role="button"> Messages </a> </li>
+          <li uiSrefActive="active"> <a uiSref="contacts" role="button"> Contacts </a> </li>
+          <li uiSrefActive="active"> <a uiSref="prefs" role="button"> Preferences </a> </li>
+          <li class="navbar-right">
+            <button class="btn btn-primary fa fa-home" uiSref="home"></button>
+            <button style="margin-right: 15px;" class="btn btn-primary" uiSref="mymessages.compose">
+              <i class="fa fa-envelope"></i> New Message
+            </button>
+          </li>
+          <li class="navbar-text navbar-right logged-in-user" style="margin: 0.5em 1.5em;">
+            <div>
+              {{emailAddress}} <i class="fa fa-chevron-down"></i>
+              <div class="hoverdrop">
+                <button class="btn btn-primary" (click)="logout()">Log Out</button>
+              </div>
             </div>
-          </div>
-        </li>
-
-      </ul>
+          </li>
+        </ul>
+      }
     </div>
-
+    
     <ui-view></ui-view>
-`,
+    `,
     styles: [],
     standalone: false
 })
