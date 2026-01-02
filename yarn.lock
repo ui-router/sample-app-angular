@@ -237,13 +237,6 @@
     ora "9.0.0"
     rxjs "7.8.2"
 
-"@angular/animations@^21.0.6":
-  version "21.0.6"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-21.0.6.tgz#19f7305e34786145ea7a80ddb74f39436416db53"
-  integrity sha512-dSxhkh/ZlljdglZ0rriSy7GdC1Y3rGaagkx6oAzF5XqAoBbFmiVFEBZPxssSeQ+O0izmAw3GwsUnz3E/1JYsbA==
-  dependencies:
-    tslib "^2.3.0"
-
 "@angular/build@21.0.4":
   version "21.0.4"
   resolved "https://registry.yarnpkg.com/@angular/build/-/build-21.0.4.tgz#4a396de4c5dac471440352e11f5fe47ca8b82a75"
@@ -2736,11 +2729,6 @@
   integrity sha512-25g5atgiVNTIv0LBDTg1H74Hvayx0ajtJPLLcYE3whFv75J0pWNtOBzaXJQgDTmrX1bx5U9YC2w/n65BN1HwRQ==
   dependencies:
     "@types/node" "*"
-
-"@types/jasmine@~5.1.0":
-  version "5.1.13"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-5.1.13.tgz#c27d125ebac28d7d1c34b650fc593f96f89b088a"
-  integrity sha512-MYCcDkruFc92LeYZux5BC0dmqo2jk+M5UIZ4/oFnAPCXN9mCcQhLyj7F3/Za7rocVyt5YRr1MmqJqFlvQ9LVcg==
 
 "@types/json-schema@*", "@types/json-schema@^7.0.15", "@types/json-schema@^7.0.9":
   version "7.0.15"
