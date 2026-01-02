@@ -28,11 +28,9 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^21.0.4",
-    "@angular/animations": "^21.0.6",
     "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.6",
     "@playwright/test": "^1.57.0",
-    "@types/jasmine": "~5.1.0",
     "serve": "^14.2.5",
     "typescript": "~5.9.3"
   },
