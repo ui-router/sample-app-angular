@@ -16,43 +16,53 @@ import { AppConfigService } from './global/app-config.service';
       <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <h3>Log In</h3>
         <p>
-          (This login screen is for demonstration only... 
+          (This login screen is for demonstration only...
           just pick a username, enter 'password' and click <b>"Log in"</b>)</p>
-        <hr>
+          <hr>
     
-        <div>
-          <label for="username">Username:</label>
-          <select class="form-control" name="username" id="username" [(ngModel)]="credentials.username">
-            <option *ngFor="let username of usernames" [value]="username">{{username}}</option>
-          </select>
-          
-          <i style="position: relative; bottom: 1.8em; margin-left: 10em; height: 0"
-              *ngIf="!credentials.username" class="fa fa-arrow-left bounce-horizontal"> Choose </i>
-        </div>
-        <br>
+            <div>
+              <label for="username">Username:</label>
+              <select class="form-control" name="username" id="username" [(ngModel)]="credentials.username">
+                @for (username of usernames; track username) {
+                  <option [value]="username">{{username}}</option>
+                }
+              </select>
     
-        <div>
-          <label for="password">Password:</label>
-          <input class="form-control" type="password" name="password" [(ngModel)]="credentials.password">
-          <i style="position: relative; bottom: 1.8em; margin-left: 5em; height: 0"
-              *ngIf="credentials.username && credentials.password !== 'password'" class="fa fa-arrow-left bounce-horizontal">
-            Enter '<b>password</b>' here
-          </i>
-        </div>
+              @if (!credentials.username) {
+                <i style="position: relative; bottom: 1.8em; margin-left: 10em; height: 0"
+                class="fa fa-arrow-left bounce-horizontal"> Choose </i>
+              }
+            </div>
+            <br>
     
-        <div [hidden]="!errorMessage" class="well error">{{ errorMessage }}</div>
+              <div>
+                <label for="password">Password:</label>
+                <input class="form-control" type="password" name="password" [(ngModel)]="credentials.password">
+                @if (credentials.username && credentials.password !== 'password') {
+                  <i style="position: relative; bottom: 1.8em; margin-left: 5em; height: 0"
+                    class="fa fa-arrow-left bounce-horizontal">
+                    Enter '<b>password</b>' here
+                  </i>
+                }
+              </div>
     
-        <hr>
-        <div>
-          <button class="btn btn-primary" type="button" [disabled]="authenticating" (click)="login(credentials)">
-            <i class="fa fa-spin fa-spinner" *ngIf="authenticating"></i> <span>Log in</span>
-          </button>
-          <i *ngIf="credentials.username || credentials.password !== 'password'" 
-          style="position: relative;" class="fa fa-arrow-left bounce-horizontal"> Click Me!</i>
-        </div>
-      </div>
-    </div>
-`,
+              <div [hidden]="!errorMessage" class="well error">{{ errorMessage }}</div>
+    
+              <hr>
+                <div>
+                  <button class="btn btn-primary" type="button" [disabled]="authenticating" (click)="login(credentials)">
+                    @if (authenticating) {
+                      <i class="fa fa-spin fa-spinner"></i>
+                      } <span>Log in</span>
+                    </button>
+                    @if (credentials.username || credentials.password !== 'password') {
+                      <i
+                      style="position: relative;" class="fa fa-arrow-left bounce-horizontal"> Click Me!</i>
+                    }
+                  </div>
+                </div>
+              </div>
+    `,
     styles: [],
     standalone: false
 })

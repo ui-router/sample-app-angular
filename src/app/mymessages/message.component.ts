@@ -27,21 +27,29 @@ import { Folder, Message } from './interface';
         <div class="line2">
           <div>{{message.date | date: 'longDate'}} {{message.date | date: 'mediumTime'}}</div>
           <div>
-            <button class="btn btn-primary" *ngIf="actions.edit" (click)="editDraft(message)">
-              <i class="fa fa-pencil"></i> <span>Edit Draft</span>
-            </button>
-            
-            <button class="btn btn-primary" *ngIf="actions.reply" (click)="reply(message)">
-              <i class="fa fa-reply"></i> <span>Reply</span>
-            </button>
-            
-            <button class="btn btn-primary" *ngIf="actions.forward" (click)="forward(message)">
-              <i class="fa fa-forward" ></i> <span>Forward</span>
-            </button>
-            
-            <button class="btn btn-primary" *ngIf="actions.delete" (click)="remove(message)">
-              <i class="fa fa-close"></i> <span>Delete</span>
-            </button>
+            @if (actions.edit) {
+              <button class="btn btn-primary" (click)="editDraft(message)">
+                <i class="fa fa-pencil"></i> <span>Edit Draft</span>
+              </button>
+            }
+    
+            @if (actions.reply) {
+              <button class="btn btn-primary" (click)="reply(message)">
+                <i class="fa fa-reply"></i> <span>Reply</span>
+              </button>
+            }
+    
+            @if (actions.forward) {
+              <button class="btn btn-primary" (click)="forward(message)">
+                <i class="fa fa-forward" ></i> <span>Forward</span>
+              </button>
+            }
+    
+            @if (actions.delete) {
+              <button class="btn btn-primary" (click)="remove(message)">
+                <i class="fa fa-close"></i> <span>Delete</span>
+              </button>
+            }
           </div>
         </div>
       </div>
@@ -49,7 +57,7 @@ import { Folder, Message } from './interface';
       <!-- Pass the raw (plain text) message body through the messageBody filter to format slightly nicer. -->
       <div class="body" [innerHTML]="message.body | formatMessage"></div>
     </div>
-`,
+    `,
     styles: [],
     standalone: false
 })

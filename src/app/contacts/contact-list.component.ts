@@ -18,19 +18,21 @@ import { Component, Input } from '@angular/core';
         </button>
       </a>
     </li>
-
+  
     <li>&nbsp;</li>
-
+  
     <!-- Highlight the selected contact:
-        When the current state matches the ui-sref's state (and its parameters)
-        ui-sref-active applies the 'selected' class to the li element -->
-    <li *ngFor="let contact of contacts" >
-      <a uiSref=".contact" [uiParams]="{contactId: contact._id}" uiSrefActive="selected">
-        {{contact.name.first}} {{contact.name.last}}
-      </a>
-    </li>
+    When the current state matches the ui-sref's state (and its parameters)
+    ui-sref-active applies the 'selected' class to the li element -->
+    @for (contact of contacts; track contact) {
+      <li >
+        <a uiSref=".contact" [uiParams]="{contactId: contact._id}" uiSrefActive="selected">
+          {{contact.name.first}} {{contact.name.last}}
+        </a>
+      </li>
+    }
   </ul>
-`,
+  `,
     styles: [],
     standalone: false
 })

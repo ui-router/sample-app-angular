@@ -15,27 +15,51 @@ import { Component, Input } from '@angular/core';
     <table>
       <thead>
         <tr>
-          <td *ngIf="colVisible('read')"></td>
-          <td *ngIf="colVisible('from')"    app-sort-messages prop="from"    label="Sender"></td>
-          <td *ngIf="colVisible('to')"      app-sort-messages prop="to"      label="Recipient"></td>
-          <td *ngIf="colVisible('subject')" app-sort-messages prop="subject" label="Subject"></td>
-          <td *ngIf="colVisible('date')"    app-sort-messages prop="date"    label="Date"></td>
+          @if (colVisible('read')) {
+            <td></td>
+          }
+          @if (colVisible('from')) {
+            <td    app-sort-messages prop="from"    label="Sender"></td>
+          }
+          @if (colVisible('to')) {
+            <td      app-sort-messages prop="to"      label="Recipient"></td>
+          }
+          @if (colVisible('subject')) {
+            <td app-sort-messages prop="subject" label="Subject"></td>
+          }
+          @if (colVisible('date')) {
+            <td    app-sort-messages prop="date"    label="Date"></td>
+          }
         </tr>
       </thead>
-  
+    
       <tbody>
-        <tr *ngFor="let message of messages"
+        @for (message of messages; track message) {
+          <tr
             uiSref=".message" [uiParams]="{ messageId: message._id }" uiSrefActive="active">
-          <td *ngIf="colVisible('read')"><i class="fa fa-circle" style="font-size: 50%" *ngIf="!message.read"></i></td>
-          <td *ngIf="colVisible('from')">{{ message.from }}</td>
-          <td *ngIf="colVisible('to')">{{ message.to }}</td>
-          <td *ngIf="colVisible('subject')">{{ message.subject }}</td>
-          <td *ngIf="colVisible('date')">{{ message.date | date: "yyyy-MM-dd" }}</td>
-        </tr>
+            @if (colVisible('read')) {
+              <td>@if (!message.read) {
+                <i class="fa fa-circle" style="font-size: 50%"></i>
+              }</td>
+            }
+            @if (colVisible('from')) {
+              <td>{{ message.from }}</td>
+            }
+            @if (colVisible('to')) {
+              <td>{{ message.to }}</td>
+            }
+            @if (colVisible('subject')) {
+              <td>{{ message.subject }}</td>
+            }
+            @if (colVisible('date')) {
+              <td>{{ message.date | date: "yyyy-MM-dd" }}</td>
+            }
+          </tr>
+        }
       </tbody>
-  
+    
     </table>
-`,
+    `,
     styles: [],
     standalone: false
 })

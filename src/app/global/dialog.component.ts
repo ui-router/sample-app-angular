@@ -7,16 +7,18 @@ import { wait } from '../util/util';
       <div class="backdrop" [class.active]="visible"></div>
       <div class='wrapper'>
         <div class="content">
-          <h4 *ngIf="message">{{message}}</h4>
+          @if (message) {
+            <h4>{{message}}</h4>
+          }
           <div [hidden]="!details">{{details}}</div>
-    
+      
           <div style="padding-top: 1em;">
             <button class="btn btn-primary" (click)="yes()">{{yesMsg}}</button>
             <button class="btn btn-primary" (click)="no()">{{noMsg}}</button>
           </div>
         </div>
       </div>
-`,
+      `,
     styles: [],
     standalone: false
 })
