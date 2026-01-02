@@ -1,4 +1,4 @@
-name: 'CI'
+name: "CI"
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
   pull_request:
 
 jobs:
-
   ci:
     needs: [test]
     runs-on: ubuntu-latest
@@ -15,20 +14,25 @@ jobs:
       - run: true
 
   test:
-    name: yarn ${{ matrix.yarncmd }}
+    name: npm ${{ matrix.script }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        yarncmd: ['test']
+        script: ["test"]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
       - name: Configure
         run: |
           git config --global user.email uirouter@github.actions
           git config --global user.name uirouter_github_actions
       - name: Install Dependencies
-        run: yarn install --pure-lockfile
-      #- name: Check Peer Dependencies
-      #  run: npx check-peer-dependencies
+        run: npm ci
+      # - name: Check Peer Dependencies
+      #   run: npx check-peer-dependencies
       - name: Run Tests
-        run: yarn ${{ matrix.yarncmd }}
+        run: npm run ${{ matrix.script }}
