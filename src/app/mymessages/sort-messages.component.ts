@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, HostListener, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { AppConfigService } from '../global/app-config.service';
 import { Subscription } from 'rxjs';
 
@@ -15,6 +15,7 @@ import { Subscription } from 'rxjs';
     ></i>{{ label }}
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SortMessagesComponent implements OnInit, OnDestroy {

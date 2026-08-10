@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AppConfigService } from '../global/app-config.service';
 
 /**
@@ -18,6 +18,7 @@ import { AppConfigService } from '../global/app-config.service';
     </div>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PrefsComponent {

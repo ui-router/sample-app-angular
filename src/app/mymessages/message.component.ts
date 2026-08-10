@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { setProp } from '../util/util';
 import { DialogService } from '../global/dialog.service';
 import { MessagesDataService } from './messages-data.service';
@@ -59,6 +59,7 @@ import { Folder, Message } from './interface';
     </div>
     `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MessageComponent implements OnInit {

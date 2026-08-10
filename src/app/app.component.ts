@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewContainerRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { DialogService } from './global/dialog.service';
 import { StateService } from '@uirouter/core';
 import { AuthService } from './global/auth.service';
@@ -42,6 +42,7 @@ import { AppConfigService } from './global/app-config.service';
     <ui-view></ui-view>
     `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent implements OnInit {

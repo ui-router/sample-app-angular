@@ -6,7 +6,8 @@
 */
 {
   "compilerOptions": {
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "bundler"
   },
   "files": [],
   "references": [

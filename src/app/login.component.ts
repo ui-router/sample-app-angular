@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { TargetState, StateService } from '@uirouter/core';
 import { AuthService } from './global/auth.service';
 import { AppConfigService } from './global/app-config.service';
@@ -64,6 +64,7 @@ import { AppConfigService } from './global/app-config.service';
               </div>
     `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class LoginComponent {
