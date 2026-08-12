@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, Inject, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { StateService, TransitionService, equals, StateDeclaration } from '@uirouter/core';
 import { DialogService } from '../global/dialog.service';
 import { ContactsDataService } from './contacts-data.service';
@@ -56,6 +56,7 @@ import { copy } from '../util/util';
     </div>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class EditContactComponent implements OnInit {

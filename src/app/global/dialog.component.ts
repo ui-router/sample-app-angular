@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 import { wait } from '../util/util';
 
 @Component({
@@ -20,6 +20,7 @@ import { wait } from '../util/util';
       </div>
       `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DialogComponent implements OnInit {

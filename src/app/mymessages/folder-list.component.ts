@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * Renders a list of folders
@@ -23,6 +23,7 @@ import { Component, Input } from '@angular/core';
     </div>
     `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class FolderListComponent {

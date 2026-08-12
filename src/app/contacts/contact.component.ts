@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * This component renders details for a single contact
@@ -26,6 +26,7 @@ import { Component, Input } from '@angular/core';
     </div>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ContactComponent {

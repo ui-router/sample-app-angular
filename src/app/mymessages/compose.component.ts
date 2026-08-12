@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { Transition, StateService, equals, TransitionService } from '@uirouter/core';
 import { DialogService } from '../global/dialog.service';
 import { AppConfigService } from '../global/app-config.service';
@@ -35,6 +35,7 @@ import { copy } from '../util/util';
     </div>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ComposeComponent implements OnInit {

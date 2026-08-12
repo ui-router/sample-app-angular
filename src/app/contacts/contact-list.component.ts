@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * This component renders a list of contacts.
@@ -34,6 +34,7 @@ import { Component, Input } from '@angular/core';
   </ul>
   `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ContactListComponent {

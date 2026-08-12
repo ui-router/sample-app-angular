@@ -1,17 +1,12 @@
-import { Injectable, ViewContainerRef, ComponentFactoryResolver, Injector, ComponentFactory } from '@angular/core';
+import { Injectable, ViewContainerRef, Injector } from '@angular/core';
 import { DialogComponent } from './dialog.component';
 
 @Injectable()
 export class DialogService {
   vcRef: ViewContainerRef;
-  private factory: ComponentFactory<DialogComponent>;
-
-  constructor(resolver: ComponentFactoryResolver) {
-    this.factory = resolver.resolveComponentFactory(DialogComponent);
-  }
 
   confirm(message, details = 'Are you sure?', yesMsg = 'Yes', noMsg = 'No') {
-    const componentRef = this.vcRef.createComponent(this.factory);
+    const componentRef = this.vcRef.createComponent(DialogComponent);
     const component = componentRef.instance;
 
     component.message = message;

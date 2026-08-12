@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 // This is a home component for authenticated users.
 // It shows giant buttons which activate their respective submodules: Messages, Contacts, Preferences
 @Component({
@@ -22,6 +22,7 @@ import { Component, OnInit } from '@angular/core';
     </div>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class HomeComponent {
