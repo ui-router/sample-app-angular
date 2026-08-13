@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * A component that displays a folder of messages as a table
@@ -61,6 +61,7 @@ import { Component, Input } from '@angular/core';
     </table>
     `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MessageTableComponent {

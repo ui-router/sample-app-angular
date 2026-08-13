@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * The main mymessages component.
@@ -24,6 +24,7 @@ import { Component, Input } from '@angular/core';
     <ui-view name="messagecontent"></ui-view>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MymessagesComponent {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'app-welcome',
@@ -34,6 +34,7 @@ import { Component, OnInit } from '@angular/core';
     </div>
 `,
     styles: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class WelcomeComponent implements OnInit {
